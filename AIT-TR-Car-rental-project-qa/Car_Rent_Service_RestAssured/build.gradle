@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // ======== REST API Testing ========
+    implementation 'io.rest-assured:rest-assured:5.5.1'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.14'
+    implementation 'org.apache.httpcomponents:fluent-hc:4.5.14'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+//
+//    // ======== Selenium Web Testing ========
+//    implementation 'org.seleniumhq.selenium:selenium-java:4.30.0'
+//    implementation 'io.github.bonigarcia:webdrivermanager:6.0.1'
+
+    // ======== JSON Parsing ========
+    implementation 'com.google.code.gson:gson:2.12.1'
+
+    // ======== Database Connection ========
+    implementation 'mysql:mysql-connector-java:8.0.33'
+
+    // ======== Logging ========
+    implementation 'org.slf4j:slf4j-api:2.0.7'
+    implementation 'ch.qos.logback:logback-classic:1.5.18'
+
+    // ======== Lombok (for generating boilerplate code) ========
+    implementation 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+    testImplementation 'org.projectlombok:lombok:1.18.36'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+    // ======== Testing Framework ========
+    testImplementation 'org.testng:testng:7.11.0'
+
+}
+
+test {
+    useTestNG()
+}
