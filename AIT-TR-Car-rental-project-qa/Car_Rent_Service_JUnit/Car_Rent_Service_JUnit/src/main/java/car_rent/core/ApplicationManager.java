@@ -1,9 +1,6 @@
 package car_rent.core;
 
-import car_rent.pages.AccountPage;
-import car_rent.pages.AdminPage;
-import car_rent.pages.HomePage;
-import car_rent.pages.LoginPage;
+import car_rent.pages.*;
 import car_rent.pages.admin_pages.AddCarPage;
 import car_rent.pages.admin_pages.CarsPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -24,6 +21,7 @@ public class ApplicationManager {
     public LoginPage loginPage;
     public AddCarPage addCarPage;
     public CarsPage carsPage;
+    public RegistrationPage registrationPage;
 
     public void init() {
         String browser = System.getProperty("browser", "chrome");
@@ -57,6 +55,7 @@ public class ApplicationManager {
         loginPage = new LoginPage(driver, wait);
         addCarPage = new AddCarPage(driver, wait);
         carsPage = new CarsPage(driver, wait);
+        registrationPage = new RegistrationPage(driver, wait);
     }
 
     public BasePage getBasePage() {
@@ -81,6 +80,10 @@ public class ApplicationManager {
 
     public CarsPage getCarsPage() {
         return new CarsPage(driver, wait);
+    }
+
+    public RegistrationPage getRegistrationPage() {
+        return new RegistrationPage(driver, wait);
     }
 
     public void stop() {

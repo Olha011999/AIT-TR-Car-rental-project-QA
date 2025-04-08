@@ -18,7 +18,7 @@ public class RegistrationTests extends TestBase {
     @Test
     public void registrationPositiveTest() {
         new RegistrationPage(app.driver, app.wait)
-                .enterPersonalData("John", "Snow", "johnsnow5_test1@gmail.com", "Password1@")
+                .enterPersonalData("John", "Snow", "johnsnow55_test1@gmail.com", "Password1@")
                 .agreeToTerms()
                 .clickCreateButton()
                 .verifySuccessMessage("Registration successful! Please check your email to confirm your registration.")

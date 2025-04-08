@@ -34,5 +34,4 @@ public class AccountPage extends BasePage {
                 return false;
             }
         }
-
     }
