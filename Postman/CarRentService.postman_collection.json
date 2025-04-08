@@ -11,6 +11,1612 @@
 			"name": "ADMIN",
 			"item": [
 				{
+					"name": "1. Add a car",
+					"item": [
+						{
+							"name": "1.1 Positive",
+							"item": [
+								{
+									"name": "POST. Add Car to the List",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Car successfully added\", () => {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    pm.environment.set(\"carId\", pm.response.json().id);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"brand\": \"BMW\",\r\n  \"model\": \"X5\",\r\n  \"year\": 2025,\r\n  \"type\": \"SUV\",\r\n  \"fuelType\": \"DIESEL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"AVAILABLE\",\r\n  \"dayRentalPrice\": 250,\r\n  \"carImage\": \"https://example.com/images/bmw-x5.png\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET. Verify Required Fields",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Verify Required Fields\", () => {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    const cars = pm.response.json();\r",
+													"    cars.forEach(car => {\r",
+													"        pm.expect(car).to.have.property(\"brand\");\r",
+													"        pm.expect(car).to.have.property(\"model\");\r",
+													"        pm.expect(car).to.have.property(\"year\");\r",
+													"        pm.expect(car).to.have.property(\"type\");\r",
+													"        pm.expect(car).to.have.property(\"fuelType\");\r",
+													"        pm.expect(car).to.have.property(\"transmissionType\");\r",
+													"        pm.expect(car).to.have.property(\"carStatus\");\r",
+													"        pm.expect(car).to.have.property(\"dayRentalPrice\");\r",
+													"    });\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET. Verify Car Addition",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Car Successfully Added\", () => {\r",
+													"    pm.response.to.have.status(200); \r",
+													"\r",
+													"    const car = pm.response.json();\r",
+													"    \r",
+													"    // Проверка, что ответ содержит ID\r",
+													"    pm.expect(car).to.have.property(\"id\");\r",
+													"    pm.expect(car.id).to.eql(15);  \r",
+													"});\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/cars/15",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars",
+												"15"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST. Verify that only valid file formats can be uploaded for car photos",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200 OK\", () => {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Image uploaded successfully\", () => {\r",
+													"    const response = pm.response.json();\r",
+													"    pm.expect(response.message).to.eql(\"Image uploaded successfully\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/admin/IdeaProjects/AIT_QA_Project/QA_Lesson_25/robot.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{URL}}/cars/upload-image",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars",
+												"upload-image"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET. Verify validation for numerical fields (Year)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Year must be a valid number\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.year).to.be.a('number');\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Camry\",\r\n  \"year\": 2024,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"available\",\r\n  \"dayRentalPrice\": 180,\r\n  \"carImage\": \"https://example.com/toyota-camry.jpg\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST. Verify successful addition of a car with different valid data",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 201 Created\", () => {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Car is successfully added with valid data\", () => {\r",
+													"    const response = pm.response.json();\r",
+													"    pm.expect(response.brand).to.eql(\"Audi\");\r",
+													"    pm.expect(response.model).to.eql(\"A4\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"brand\": \"Audi\",\r\n  \"model\": \"A4\",\r\n  \"year\": 2024,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"MANUAL\",\r\n  \"carStatus\": \"available\",\r\n  \"dayRentalPrice\": 180,\r\n  \"carImage\": \"https://example.com/audi.png\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "1.2 Negative",
+							"item": [
+								{
+									"name": "POST. Add a Car with Missing Required Fields",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400 Bad Request\", () => {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response contains error message\", () => {\r",
+													"    const response = pm.response.json();\r",
+													"    pm.expect(response.message).to.include(\"Required field missing\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"available\",\r\n  \"dayRentalPrice\": 150,\r\n  \"carImage\": \"https://example.com/car.png\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST. Add a Car with Invalid Year",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400 Bad Request\", () => {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response contains error message\", () => {\r",
+													"    const response = pm.response.json();\r",
+													"    pm.expect(response.message).to.include(\"Invalid year\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 1,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"available\",\r\n  \"dayRentalPrice\": 150,\r\n  \"carImage\": \"https://example.com/car.png\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST. Add a Car with an Unsupported Image Format",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 415 Unsupported Media Type\", () => {\r",
+													"    pm.response.to.have.status(415);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response contains error message\", () => {\r",
+													"    const response = pm.response.json();\r",
+													"    pm.expect(response.message).to.include(\"Unsupported file format\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "postman-cloud:///1f00f345-07d4-4b70-a523-108f71f52b0f"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{URL}}/cars/upload-image",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars",
+												"upload-image"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST. Add a Car Without Uploading a Photo",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400 Bad Request\", () => {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Error message for missing image\", () => {\r",
+													"    const response = pm.response.json();\r",
+													"    pm.expect(response.message).to.include(\"Car image is required\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"brand\": \"Hyundai\",\r\n  \"model\": \"Elantra\",\r\n  \"year\": 2025,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"available\",\r\n  \"dayRentalPrice\": 130\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST. Add a Car with Special Characters in Text Fields",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400 Bad Request\", () => {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Error message for special characters\", () => {\r",
+													"    const response = pm.response.json();\r",
+													"    pm.expect(response.message).to.include(\"Invalid characters in text fields\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"brand\": \"Hyundai@#$%\",\r\n  \"model\": \"Elantra^^^\",\r\n  \"year\": 2025,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"available\",\r\n  \"dayRentalPrice\": 130,\r\n  \"carImage\": \"https://example.com/elantra.png\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST. Submit the Form with Excessively Long Text Input",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400 Bad Request\", () => {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Error message for excessively long input\", () => {\r",
+													"    const response = pm.response.json();\r",
+													"    pm.expect(response.message).to.include(\"Input length exceeds the allowed limit\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"brand\": \"A\".repeat(500),\r\n  \"model\": \"B\".repeat(500),\r\n  \"year\": 2025,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"available\",\r\n  \"dayRentalPrice\": 200,\r\n  \"carImage\": \"https://example.com/car.png\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST. Add a Car Without Authentication",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 401 Unauthorized\", () => {\r",
+													"    pm.response.to.have.status(401);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Unauthorized access message is returned\", () => {\r",
+													"    const response = pm.response.json();\r",
+													"    pm.expect(response.message).to.include(\"User not authenticated\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"brand\": \"Honda\",\r\n  \"model\": \"Civic\",\r\n  \"year\": 2023,\r\n  \"type\": \"HATCHBACK\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"MANUAL\",\r\n  \"carStatus\": \"available\",\r\n  \"dayRentalPrice\": 180,\r\n  \"carImage\": \"https://example.com/honda.png\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{ADMIN_accessToken}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "2. Edit car item",
+					"item": [
+						{
+							"name": "2.1 Positive",
+							"item": [
+								{
+									"name": "PUT. Edit rental status with valid input",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"if (pm.response.code === 200) {\r",
+													"    var jsonResponse = pm.response.json();\r",
+													"    pm.environment.set(\"ADMIN_accessToken\", jsonResponse.ADMIN_accessToken);\r",
+													"    pm.environment.set(\"ADMIN_refreshToken\", jsonResponse.ADMIN_refreshToken);\r",
+													"    console.log(\"ADMIN_accessToken token saved:\", jsonResponse.ADMIN_accessToken);\r",
+													"} else {\r",
+													"    console.log(\"Error receiving token\");\r",
+													"}"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"if (!pm.environment.get(\"ADMIN_accessToken\")) {\r",
+													"    console.log(\"Error: ADMIN_accessToken not found\");\r",
+													"} else {\r",
+													"    console.log(\"ADMIN_accessToken:\", pm.environment.get(\"ADMIN_accessToken\"));\r",
+													"}\r",
+													"console.log(\"Access Token:\", pm.environment.get(\"ADMIN_accessToken\"));"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id\": 5,\r\n  \"rentalStatus\": \"completed\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET. Cars By RentalPrice",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"// Проверка статуса ответа\r",
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"// Проверка структуры ответа (должен быть массив объектов)\r",
+													"pm.test(\"Response is an array\", function () {\r",
+													"    const jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.be.an(\"array\");\r",
+													"    pm.expect(jsonData.length).to.be.greaterThan(0);  // Проверяем, что массив не пустой\r",
+													"});\r",
+													"\r",
+													"// Проверка структуры объектов в массиве\r",
+													"pm.test(\"Response objects have correct structure\", function () {\r",
+													"    const jsonData = pm.response.json();\r",
+													"    jsonData.forEach(car => {\r",
+													"        pm.expect(car).to.have.keys([\r",
+													"            \"id\",\r",
+													"            \"brand\",\r",
+													"            \"model\",\r",
+													"            \"year\",\r",
+													"            \"type\",\r",
+													"            \"fuelType\",\r",
+													"            \"transmissionType\",\r",
+													"            \"carStatus\",\r",
+													"            \"dayRentalPrice\",\r",
+													"            \"carImage\"\r",
+													"        ]);\r",
+													"    });\r",
+													"});\r",
+													"\r",
+													"// Проверка типа данных каждого поля\r",
+													"pm.test(\"Correct data types in response\", function () {\r",
+													"    const jsonData = pm.response.json();\r",
+													"    jsonData.forEach(car => {\r",
+													"        pm.expect(car.id).to.be.a(\"number\");\r",
+													"        pm.expect(car.brand).to.be.a(\"string\");\r",
+													"        pm.expect(car.model).to.be.a(\"string\");\r",
+													"        pm.expect(car.year).to.be.a(\"number\");\r",
+													"        pm.expect(car.type).to.be.a(\"string\");\r",
+													"        pm.expect(car.fuelType).to.be.a(\"string\");\r",
+													"        pm.expect(car.transmissionType).to.be.a(\"string\");\r",
+													"        pm.expect(car.carStatus).to.be.a(\"string\");\r",
+													"        pm.expect(car.dayRentalPrice).to.be.a(\"number\");\r",
+													"\r",
+													"        // Проверка для carImage: Разрешить null\r",
+													"        pm.expect(car.carImage === null || typeof car.carImage === \"string\").to.be.true;\r",
+													"    });\r",
+													"});\r",
+													"\r",
+													"// Проверка URL изображения для каждого автомобиля, если оно не null\r",
+													"pm.test(\"All car images are valid URLs or null\", function () {\r",
+													"    const jsonData = pm.response.json();\r",
+													"    jsonData.forEach(car => {\r",
+													"        if (car.carImage !== null) {\r",
+													"            pm.expect(car.carImage).to.match(/^https?:\\/\\/[^\\s$.?#].[^\\s]*$/);\r",
+													"        }\r",
+													"    });\r",
+													"});\r",
+													"\r",
+													"// Проверка, что цены автомобилей находятся в пределах заданного диапазона\r",
+													"pm.test(\"Cars have day rental prices within specified range\", function () {\r",
+													"    const jsonData = pm.response.json();\r",
+													"    const minPrice = 50;\r",
+													"    const maxPrice = 200;\r",
+													"\r",
+													"    jsonData.forEach(car => {\r",
+													"        pm.expect(car.dayRentalPrice).to.be.within(minPrice, maxPrice);\r",
+													"    });\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{ADMIN_accessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{ADMIN_accessToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{URL}}/cars/filter/rental-price/50-200",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars",
+												"filter",
+												"rental-price",
+												"50-200"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT. Edit rental price with valid input",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"if (!pm.environment.get(\"ADMIN_accessToken\")) {\r",
+													"    console.log(\"Error: ADMIN_accessToken not found\");\r",
+													"} else {\r",
+													"    console.log(\"ADMIN_accessToken:\", pm.environment.get(\"ADMIN_accessToken\"));\r",
+													"}\r",
+													"console.log(\"Access Token:\", pm.environment.get(\"ADMIN_accessToken\"));\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"if (pm.response.code === 200) {\r",
+													"    var jsonResponse = pm.response.json();\r",
+													"    pm.environment.set(\"ADMIN_accessToken\", jsonResponse.ADMIN_accessToken);\r",
+													"    pm.environment.set(\"ADMIN_refreshToken\", jsonResponse.ADMIN_refreshToken);\r",
+													"    console.log(\"ADMIN_accessToken token saved:\", jsonResponse.ADMIN_accessToken);\r",
+													"} else {\r",
+													"    console.log(\"Error receiving token\");\r",
+													"}"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{ADMIN_accessToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"brand\": \"VW\",\r\n  \"model\": \"Golf\",\r\n  \"year\": 2025,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"RENTED\",\r\n  \"dayRentalPrice\": 150,\r\n  \"carImage\": \"https://shop-bucket.fra1.digitaloceanspaces.com/coconut-caf872c7-2ebd-4ec0-bd28-ff198091392c.png\"\r\n}\r\n\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET. Retrieve rental details after successful update",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"// Проверка статуса ответа\r",
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"// Проверка структуры ответа (должен быть массив объектов)\r",
+													"pm.test(\"Response is an array\", function () {\r",
+													"    const jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.be.an(\"array\");\r",
+													"    pm.expect(jsonData.length).to.be.greaterThan(0);  // Проверяем, что массив не пустой\r",
+													"});\r",
+													"\r",
+													"// Проверка структуры объектов в массиве\r",
+													"pm.test(\"Response objects have correct structure\", function () {\r",
+													"    const jsonData = pm.response.json();\r",
+													"    jsonData.forEach(car => {\r",
+													"        pm.expect(car).to.have.keys([\r",
+													"            \"id\",\r",
+													"            \"brand\",\r",
+													"            \"model\",\r",
+													"            \"year\",\r",
+													"            \"type\",\r",
+													"            \"fuelType\",\r",
+													"            \"transmissionType\",\r",
+													"            \"carStatus\",\r",
+													"            \"dayRentalPrice\",\r",
+													"            \"carImage\"\r",
+													"        ]);\r",
+													"    });\r",
+													"});\r",
+													"\r",
+													"// Проверка, что все автомобили имеют запрошенный статус\r",
+													"pm.test(\"All cars have the requested status\", function () {\r",
+													"    const jsonData = pm.response.json();\r",
+													"    jsonData.forEach(car => {\r",
+													"        pm.expect(car.carStatus).to.eql(\"RENTED\");\r",
+													"    });\r",
+													"});\r",
+													"\r",
+													"// Проверка типа данных каждого поля\r",
+													"pm.test(\"Correct data types in response\", function () {\r",
+													"    const jsonData = pm.response.json();\r",
+													"    jsonData.forEach(car => {\r",
+													"        pm.expect(car.id).to.be.a(\"number\");\r",
+													"        pm.expect(car.brand).to.be.a(\"string\");\r",
+													"        pm.expect(car.model).to.be.a(\"string\");\r",
+													"        pm.expect(car.year).to.be.a(\"number\");\r",
+													"        pm.expect(car.type).to.be.a(\"string\");\r",
+													"        pm.expect(car.fuelType).to.be.a(\"string\");\r",
+													"        pm.expect(car.transmissionType).to.be.a(\"string\");\r",
+													"        pm.expect(car.carStatus).to.be.a(\"string\");\r",
+													"        pm.expect(car.dayRentalPrice).to.be.a(\"number\");\r",
+													"\r",
+													"        // Проверка для carImage: Разрешить null\r",
+													"        pm.expect(car.carImage === null || typeof car.carImage === \"string\").to.be.true;\r",
+													"    });\r",
+													"});\r",
+													"\r",
+													"// Проверка URL изображения для каждого автомобиля, если оно не null\r",
+													"pm.test(\"All car images are valid URLs or null\", function () {\r",
+													"    const jsonData = pm.response.json();\r",
+													"    jsonData.forEach(car => {\r",
+													"        if (car.carImage !== null) {\r",
+													"            pm.expect(car.carImage).to.match(/^https?:\\/\\/[^\\s$.?#].[^\\s]*$/);\r",
+													"        }\r",
+													"    });\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{ADMIN_accessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{URL}}/cars/filter/car-status/RENTED",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars",
+												"filter",
+												"car-status",
+												"RENTED"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "2.2 Negative",
+							"item": [
+								{
+									"name": "PUT. Attempt to edit a completed rental",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 403 or 400\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([403, 400]);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Error message states rental cannot be edited\", function () {\r",
+													"    const jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.message).to.include(\"cannot be edited\" || \"completed rental\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{ADMIN_accessToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"brand\": \"VW\",\r\n  \"model\": \"Golf\",\r\n  \"year\": 2025,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"completed\",\r\n  \"dayRentalPrice\": 200,\r\n  \"carImage\": \"https://shop-bucket.fra1.digitaloceanspaces.com/image.png\"\r\n}\r\n\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT. Input an invalid or malformed date format",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.expect(pm.response.code).to.eql(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Invalid date format error message\", function () {\r",
+													"    const jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.message).to.include(\"Invalid date format\" || \"Invalid year\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"brand\": \"VW\",\r\n  \"model\": \"Golf\",\r\n  \"year\": \"invalid-year-format\",\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"RENTED\",\r\n  \"dayRentalPrice\": 150,\r\n  \"carImage\": \"https://shop-bucket.fra1.digitaloceanspaces.com/image.png\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT. Enter a negative or non-numeric price value",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Error message indicates invalid price\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.message).to.include(\"Invalid price value\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": " {{ADMIN_accessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id\": 1,\r\n  \"brand\": \"VW\",\r\n  \"model\": \"Golf\",\r\n  \"year\": 2025,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"AVAILABLE\",\r\n  \"dayRentalPrice\": -100,\r\n  \"carImage\": \"https://example.com/car.jpg\"\r\n}\r\n\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT. Provide invalid car ID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 404\", function () {\r",
+													"    pm.response.to.have.status(404);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Correct error message\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.message).to.include(\"not found\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id\": 99999,\r\n  \"brand\": \"VW\",\r\n  \"model\": \"Golf\",\r\n  \"year\": 2025,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"AVAILABLE\",\r\n  \"dayRentalPrice\": 150,\r\n  \"carImage\": \"https://example.com/car.jpg\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT. Attempt update without admin privileges",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 403 or 401\", function () {\r",
+													"    pm.response.to.have.status([403, 401]).to.include(pm.response.code);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Error message indicates insufficient permissions\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.message).to.include(\"User not authenticated\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": " {{customer_1_accessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id\": 1,\r\n  \"brand\": \"BMW\",\r\n  \"model\": \"X5\",\r\n  \"year\": 2021,\r\n  \"type\": \"SUV\",\r\n  \"fuelType\": \"DIESEL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"AVAILABLE\",\r\n  \"dayRentalPrice\": 220,\r\n  \"carImage\": \"https://example.com/car.jpg\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT. Attempt to update with missing mandatory fields",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Error message indicates missing fields\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.message).to.include(\"User not authenticated\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{ADMIN_accessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id\": 1,\r\n  \"brand\": \"BMW\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET. Cars with invalid status",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 400 or 404\", function () {\r",
+													"    pm.expect([400, 404]).to.include(pm.response.code);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Error message indicates invalid status\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.message).to.include(\"Invalid car status\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{ADMIN_accessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/cars/filter/car-status/INVALID_STATUS",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars",
+												"filter",
+												"car-status",
+												"INVALID_STATUS"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8xQGNhci1yZW50LmRlIiwiZXhwIjoxNzQzNTM2NDMyfQ.LwlbZsYkprSsgLe85S6saQrDeeP1juVtU86fqc6xS1k",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
 					"name": "3. Delete car from data base",
 					"item": [
 						{
@@ -403,7 +2009,7 @@
 									"response": []
 								},
 								{
-									"name": "Негативный тест 5: DELETE. Attempt to delete a car with an empty or null car ID",
+									"name": "DELETE. Attempt to delete a car with an empty or null car ID",
 									"event": [
 										{
 											"listen": "test",
@@ -462,343 +2068,23 @@
 					]
 				},
 				{
-					"name": "2. Edit car item",
+					"name": "4. Return a Car",
 					"item": [
 						{
-							"name": "2.1 Positive",
+							"name": "4.1 Positive",
 							"item": [
 								{
-									"name": "PUT. Edit rental status with valid input",
+									"name": "Return a Car",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
 												"exec": [
-													"if (pm.response.code === 200) {\r",
-													"    var jsonResponse = pm.response.json();\r",
-													"    pm.environment.set(\"ADMIN_accessToken\", jsonResponse.ADMIN_accessToken);\r",
-													"    pm.environment.set(\"ADMIN_refreshToken\", jsonResponse.ADMIN_refreshToken);\r",
-													"    console.log(\"ADMIN_accessToken token saved:\", jsonResponse.ADMIN_accessToken);\r",
-													"} else {\r",
-													"    console.log(\"Error receiving token\");\r",
-													"}"
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										},
-										{
-											"listen": "prerequest",
-											"script": {
-												"exec": [
-													"if (!pm.environment.get(\"ADMIN_accessToken\")) {\r",
-													"    console.log(\"Error: ADMIN_accessToken not found\");\r",
-													"} else {\r",
-													"    console.log(\"ADMIN_accessToken:\", pm.environment.get(\"ADMIN_accessToken\"));\r",
-													"}\r",
-													"console.log(\"Access Token:\", pm.environment.get(\"ADMIN_accessToken\"));"
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										}
-									],
-									"request": {
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"id\": 5,\r\n  \"rentalStatus\": \"completed\"\r\n}\r\n",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL}}/cars",
-											"host": [
-												"{{URL}}"
-											],
-											"path": [
-												"cars"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "GET. Retrieve rental details after successful update",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"exec": [
-													"// Проверка статуса ответа\r",
-													"pm.test(\"Status code is 200\", function () {\r",
+													"pm.test(\"Verify Car is No Longer Listed as Rented After Return\", function () {\r",
 													"    pm.response.to.have.status(200);\r",
-													"});\r",
 													"\r",
-													"// Проверка структуры ответа (должен быть массив объектов)\r",
-													"pm.test(\"Response is an array\", function () {\r",
-													"    const jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData).to.be.an(\"array\");\r",
-													"    pm.expect(jsonData.length).to.be.greaterThan(0);  // Проверяем, что массив не пустой\r",
-													"});\r",
-													"\r",
-													"// Проверка структуры объектов в массиве\r",
-													"pm.test(\"Response objects have correct structure\", function () {\r",
-													"    const jsonData = pm.response.json();\r",
-													"    jsonData.forEach(car => {\r",
-													"        pm.expect(car).to.have.keys([\r",
-													"            \"id\",\r",
-													"            \"brand\",\r",
-													"            \"model\",\r",
-													"            \"year\",\r",
-													"            \"type\",\r",
-													"            \"fuelType\",\r",
-													"            \"transmissionType\",\r",
-													"            \"carStatus\",\r",
-													"            \"dayRentalPrice\",\r",
-													"            \"carImage\"\r",
-													"        ]);\r",
-													"    });\r",
-													"});\r",
-													"\r",
-													"// Проверка, что все автомобили имеют запрошенный статус\r",
-													"pm.test(\"All cars have the requested status\", function () {\r",
-													"    const jsonData = pm.response.json();\r",
-													"    jsonData.forEach(car => {\r",
-													"        pm.expect(car.carStatus).to.eql(\"RENTED\");\r",
-													"    });\r",
-													"});\r",
-													"\r",
-													"// Проверка типа данных каждого поля\r",
-													"pm.test(\"Correct data types in response\", function () {\r",
-													"    const jsonData = pm.response.json();\r",
-													"    jsonData.forEach(car => {\r",
-													"        pm.expect(car.id).to.be.a(\"number\");\r",
-													"        pm.expect(car.brand).to.be.a(\"string\");\r",
-													"        pm.expect(car.model).to.be.a(\"string\");\r",
-													"        pm.expect(car.year).to.be.a(\"number\");\r",
-													"        pm.expect(car.type).to.be.a(\"string\");\r",
-													"        pm.expect(car.fuelType).to.be.a(\"string\");\r",
-													"        pm.expect(car.transmissionType).to.be.a(\"string\");\r",
-													"        pm.expect(car.carStatus).to.be.a(\"string\");\r",
-													"        pm.expect(car.dayRentalPrice).to.be.a(\"number\");\r",
-													"\r",
-													"        // Проверка для carImage: Разрешить null\r",
-													"        pm.expect(car.carImage === null || typeof car.carImage === \"string\").to.be.true;\r",
-													"    });\r",
-													"});\r",
-													"\r",
-													"// Проверка URL изображения для каждого автомобиля, если оно не null\r",
-													"pm.test(\"All car images are valid URLs or null\", function () {\r",
-													"    const jsonData = pm.response.json();\r",
-													"    jsonData.forEach(car => {\r",
-													"        if (car.carImage !== null) {\r",
-													"            pm.expect(car.carImage).to.match(/^https?:\\/\\/[^\\s$.?#].[^\\s]*$/);\r",
-													"        }\r",
-													"    });\r",
-													"});\r",
-													""
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										},
-										{
-											"listen": "prerequest",
-											"script": {
-												"exec": [
-													""
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										}
-									],
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json",
-												"type": "text"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{ADMIN_accessToken}}",
-												"type": "text"
-											}
-										],
-										"url": {
-											"raw": "{{URL}}/cars/filter/car-status/RENTED",
-											"host": [
-												"{{URL}}"
-											],
-											"path": [
-												"cars",
-												"filter",
-												"car-status",
-												"RENTED"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "PUT. Edit rental price with valid input",
-									"event": [
-										{
-											"listen": "prerequest",
-											"script": {
-												"exec": [
-													"if (!pm.environment.get(\"ADMIN_accessToken\")) {\r",
-													"    console.log(\"Error: ADMIN_accessToken not found\");\r",
-													"} else {\r",
-													"    console.log(\"ADMIN_accessToken:\", pm.environment.get(\"ADMIN_accessToken\"));\r",
-													"}\r",
-													"console.log(\"Access Token:\", pm.environment.get(\"ADMIN_accessToken\"));\r",
-													"\r",
-													""
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										},
-										{
-											"listen": "test",
-											"script": {
-												"exec": [
-													"if (pm.response.code === 200) {\r",
-													"    var jsonResponse = pm.response.json();\r",
-													"    pm.environment.set(\"ADMIN_accessToken\", jsonResponse.ADMIN_accessToken);\r",
-													"    pm.environment.set(\"ADMIN_refreshToken\", jsonResponse.ADMIN_refreshToken);\r",
-													"    console.log(\"ADMIN_accessToken token saved:\", jsonResponse.ADMIN_accessToken);\r",
-													"} else {\r",
-													"    console.log(\"Error receiving token\");\r",
-													"}"
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "PUT",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json",
-												"type": "text"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{ADMIN_accessToken}}",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"brand\": \"VW\",\r\n  \"model\": \"Golf\",\r\n  \"year\": 2025,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"RENTED\",\r\n  \"dayRentalPrice\": 150,\r\n  \"carImage\": \"https://shop-bucket.fra1.digitaloceanspaces.com/coconut-caf872c7-2ebd-4ec0-bd28-ff198091392c.png\"\r\n}\r\n\r\n",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL}}/cars",
-											"host": [
-												"{{URL}}"
-											],
-											"path": [
-												"cars"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "GET. Cars By RentalPrice",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"exec": [
-													"// Проверка статуса ответа\r",
-													"pm.test(\"Status code is 200\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
-													"});\r",
-													"\r",
-													"// Проверка структуры ответа (должен быть массив объектов)\r",
-													"pm.test(\"Response is an array\", function () {\r",
-													"    const jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData).to.be.an(\"array\");\r",
-													"    pm.expect(jsonData.length).to.be.greaterThan(0);  // Проверяем, что массив не пустой\r",
-													"});\r",
-													"\r",
-													"// Проверка структуры объектов в массиве\r",
-													"pm.test(\"Response objects have correct structure\", function () {\r",
-													"    const jsonData = pm.response.json();\r",
-													"    jsonData.forEach(car => {\r",
-													"        pm.expect(car).to.have.keys([\r",
-													"            \"id\",\r",
-													"            \"brand\",\r",
-													"            \"model\",\r",
-													"            \"year\",\r",
-													"            \"type\",\r",
-													"            \"fuelType\",\r",
-													"            \"transmissionType\",\r",
-													"            \"carStatus\",\r",
-													"            \"dayRentalPrice\",\r",
-													"            \"carImage\"\r",
-													"        ]);\r",
-													"    });\r",
-													"});\r",
-													"\r",
-													"// Проверка типа данных каждого поля\r",
-													"pm.test(\"Correct data types in response\", function () {\r",
-													"    const jsonData = pm.response.json();\r",
-													"    jsonData.forEach(car => {\r",
-													"        pm.expect(car.id).to.be.a(\"number\");\r",
-													"        pm.expect(car.brand).to.be.a(\"string\");\r",
-													"        pm.expect(car.model).to.be.a(\"string\");\r",
-													"        pm.expect(car.year).to.be.a(\"number\");\r",
-													"        pm.expect(car.type).to.be.a(\"string\");\r",
-													"        pm.expect(car.fuelType).to.be.a(\"string\");\r",
-													"        pm.expect(car.transmissionType).to.be.a(\"string\");\r",
-													"        pm.expect(car.carStatus).to.be.a(\"string\");\r",
-													"        pm.expect(car.dayRentalPrice).to.be.a(\"number\");\r",
-													"\r",
-													"        // Проверка для carImage: Разрешить null\r",
-													"        pm.expect(car.carImage === null || typeof car.carImage === \"string\").to.be.true;\r",
-													"    });\r",
-													"});\r",
-													"\r",
-													"// Проверка URL изображения для каждого автомобиля, если оно не null\r",
-													"pm.test(\"All car images are valid URLs or null\", function () {\r",
-													"    const jsonData = pm.response.json();\r",
-													"    jsonData.forEach(car => {\r",
-													"        if (car.carImage !== null) {\r",
-													"            pm.expect(car.carImage).to.match(/^https?:\\/\\/[^\\s$.?#].[^\\s]*$/);\r",
-													"        }\r",
-													"    });\r",
-													"});\r",
-													"\r",
-													"// Проверка, что цены автомобилей находятся в пределах заданного диапазона\r",
-													"pm.test(\"Cars have day rental prices within specified range\", function () {\r",
-													"    const jsonData = pm.response.json();\r",
-													"    const minPrice = 50;\r",
-													"    const maxPrice = 200;\r",
-													"\r",
-													"    jsonData.forEach(car => {\r",
-													"        pm.expect(car.dayRentalPrice).to.be.within(minPrice, maxPrice);\r",
-													"    });\r",
+													"    let jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.carStatus).to.eql(\"AVAILABLE\");\r",
 													"});\r",
 													""
 												],
@@ -823,7 +2109,79 @@
 											"bearer": [
 												{
 													"key": "token",
-													"value": " {{ADMIN_accessToken}}",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8xQGNhci1yZW50LmRlIiwiZXhwIjoxNzQzNTgxOTQ2fQ.Y83oN0eBk4RR0jxt4tNfZquQghnKnWpy-OnSJd2L3y4",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id\": {{carId}},\r\n  \"carStatus\": \"AVAILABLE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/cars",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"cars"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Verify Car is No Longer Listed as Rented After Return",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Car status should be AVAILABLE\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"\r",
+													"    let jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.carStatus).to.eql(\"AVAILABLE\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8xQGNhci1yZW50LmRlIiwiZXhwIjoxNzQzNTgxOTQ2fQ.Y83oN0eBk4RR0jxt4tNfZquQghnKnWpy-OnSJd2L3y4",
 													"type": "string"
 												}
 											]
@@ -831,26 +2189,182 @@
 										"method": "GET",
 										"header": [
 											{
-												"key": "Accept",
+												"key": "Content-Type",
 												"value": "application/json",
-												"type": "text"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer <access_token>",
 												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
-											"raw": "{{URL}}/cars/filter/rental-price/50-200",
+											"raw": "{{URL}}/cars/{{carId}}",
 											"host": [
 												"{{URL}}"
 											],
 											"path": [
 												"cars",
-												"filter",
-												"rental-price",
-												"50-200"
+												"{{carId}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Verify Damage Check is Not Mandatory for Returning a Car",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Verify Damage Check is Not Mandatory for Returning a Car\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"\r",
+													"    let jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.carStatus).to.eql(\"AVAILABLE\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8xQGNhci1yZW50LmRlIiwiZXhwIjoxNzQzNTgxOTQ2fQ.Y83oN0eBk4RR0jxt4tNfZquQghnKnWpy-OnSJd2L3y4",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"fuelLevel\": 50\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/bookings/cancel/{bookingId}",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"bookings",
+												"cancel",
+												"{bookingId}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Verify Admin Can Edit the Return Date",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Verify Admin Can Edit the Return Date\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    \r",
+													"    let jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.returnDate).to.eql(\"2025-04-10\");\r",
+													"\r",
+													"    // Теперь отправляем GET-запрос для проверки\r",
+													"    pm.sendRequest({\r",
+													"        url: \"http://localhost:8080/api/bookings/1\",\r",
+													"        method: \"GET\",\r",
+													"        header: {\r",
+													"            \"Authorization\": \"Bearer <токен_админа>\"\r",
+													"        }\r",
+													"    }, function (err, res) {\r",
+													"        pm.test(\"Return date should be updated\", function () {\r",
+													"            pm.expect(res).to.have.status(200);\r",
+													"            let responseData = res.json();\r",
+													"            pm.expect(responseData.returnDate).to.eql(\"2025-04-10\");\r",
+													"        });\r",
+													"    });\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8xQGNhci1yZW50LmRlIiwiZXhwIjoxNzQzNTgxOTQ2fQ.Y83oN0eBk4RR0jxt4tNfZquQghnKnWpy-OnSJd2L3y4",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/bookings/extend/2",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"bookings",
+												"extend",
+												"2"
 											]
 										}
 									},
@@ -859,24 +2373,22 @@
 							]
 						},
 						{
-							"name": "2.2 Negative",
+							"name": "4.2 Negative",
 							"item": [
 								{
-									"name": "PUT. Attempt to edit a completed rental",
+									"name": "Attempt to Return a Car That is Not Rented",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
 												"exec": [
-													"pm.test(\"Status code is 403 or 400\", function () {\r",
-													"    pm.expect(pm.response.code).to.be.oneOf([403, 400]);\r",
-													"});\r",
+													"pm.test(\"Verify Cannot Return a Car That is Not Rented\", function () {\r",
+													"    pm.response.to.not.have.status(200);\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([400, 409]); // Проверяем, что ошибка\r",
 													"\r",
-													"pm.test(\"Error message states rental cannot be edited\", function () {\r",
-													"    const jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.message).to.include(\"cannot be edited\" || \"completed rental\");\r",
-													"});\r",
-													""
+													"    let jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.message).to.include(\"Car is not rented\"); // Ожидаем сообщение об ошибке\r",
+													"});"
 												],
 												"type": "text/javascript",
 												"packages": {}
@@ -894,22 +2406,27 @@
 										}
 									],
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8xQGNhci1yZW50LmRlIiwiZXhwIjoxNzQzNTgxOTQ2fQ.Y83oN0eBk4RR0jxt4tNfZquQghnKnWpy-OnSJd2L3y4",
+													"type": "string"
+												}
+											]
+										},
 										"method": "PUT",
 										"header": [
 											{
 												"key": "Content-Type",
 												"value": "application/json",
 												"type": "text"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{ADMIN_accessToken}}",
-												"type": "text"
 											}
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"brand\": \"VW\",\r\n  \"model\": \"Golf\",\r\n  \"year\": 2025,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"completed\",\r\n  \"dayRentalPrice\": 200,\r\n  \"carImage\": \"https://shop-bucket.fra1.digitaloceanspaces.com/image.png\"\r\n}\r\n\r\n",
+											"raw": "",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -917,281 +2434,53 @@
 											}
 										},
 										"url": {
-											"raw": "{{URL}}/cars",
+											"raw": "http://localhost:8080/api/bookings/cancel/2",
+											"protocol": "http",
 											"host": [
-												"{{URL}}"
+												"localhost"
 											],
-											"path": [
-												"cars"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "PUT. Input an invalid or malformed date format",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"exec": [
-													"pm.test(\"Status code is 400\", function () {\r",
-													"    pm.expect(pm.response.code).to.eql(400);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Invalid date format error message\", function () {\r",
-													"    const jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.message).to.include(\"Invalid date format\" || \"Invalid year\");\r",
-													"});\r",
-													""
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										},
-										{
-											"listen": "prerequest",
-											"script": {
-												"exec": [
-													""
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										}
-									],
-									"request": {
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"brand\": \"VW\",\r\n  \"model\": \"Golf\",\r\n  \"year\": \"invalid-year-format\",\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"RENTED\",\r\n  \"dayRentalPrice\": 150,\r\n  \"carImage\": \"https://shop-bucket.fra1.digitaloceanspaces.com/image.png\"\r\n}\r\n",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL}}/cars",
-											"host": [
-												"{{URL}}"
-											],
-											"path": [
-												"cars"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "PUT. Enter a negative or non-numeric price value",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"exec": [
-													"pm.test(\"Status code is 400\", function () {\r",
-													"    pm.response.to.have.status(400);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Error message indicates invalid price\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.message).to.include(\"Invalid price value\");\r",
-													"});\r",
-													""
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										},
-										{
-											"listen": "prerequest",
-											"script": {
-												"exec": [
-													""
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": " {{ADMIN_accessToken}}",
-													"type": "string"
-												}
-											]
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"id\": 1,\r\n  \"brand\": \"VW\",\r\n  \"model\": \"Golf\",\r\n  \"year\": 2025,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"AVAILABLE\",\r\n  \"dayRentalPrice\": -100,\r\n  \"carImage\": \"https://example.com/car.jpg\"\r\n}\r\n\r\n",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL}}/cars",
-											"host": [
-												"{{URL}}"
-											],
-											"path": [
-												"cars"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "PUT. Provide invalid car ID",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"exec": [
-													"pm.test(\"Status code is 404\", function () {\r",
-													"    pm.response.to.have.status(404);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Correct error message\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.message).to.include(\"not found\");\r",
-													"});\r",
-													""
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										},
-										{
-											"listen": "prerequest",
-											"script": {
-												"exec": [
-													""
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										}
-									],
-									"request": {
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"id\": 99999,\r\n  \"brand\": \"VW\",\r\n  \"model\": \"Golf\",\r\n  \"year\": 2025,\r\n  \"type\": \"SEDAN\",\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"AVAILABLE\",\r\n  \"dayRentalPrice\": 150,\r\n  \"carImage\": \"https://example.com/car.jpg\"\r\n}\r\n",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL}}/cars",
-											"host": [
-												"{{URL}}"
-											],
-											"path": [
-												"cars"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "PUT. Attempt update without admin privileges",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"exec": [
-													"pm.test(\"Status code is 403 or 401\", function () {\r",
-													"    pm.response.to.have.status([403, 401]).to.include(pm.response.code);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Error message indicates insufficient permissions\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.message).to.include(\"User not authenticated\");\r",
-													"});\r",
-													""
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										},
-										{
-											"listen": "prerequest",
-											"script": {
-												"exec": [
-													""
-												],
-												"type": "text/javascript",
-												"packages": {}
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": " {{customer_1_accessToken}}",
-													"type": "string"
-												}
-											]
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"id\": 1,\r\n  \"brand\": \"BMW\",\r\n  \"model\": \"X5\",\r\n  \"year\": 2021,\r\n  \"type\": \"SUV\",\r\n  \"fuelType\": \"DIESEL\",\r\n  \"transmissionType\": \"AUTOMATIC\",\r\n  \"carStatus\": \"AVAILABLE\",\r\n  \"dayRentalPrice\": 220,\r\n  \"carImage\": \"https://example.com/car.jpg\"\r\n}\r\n",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL}}/api/cars",
-											"host": [
-												"{{URL}}"
-											],
+											"port": "8080",
 											"path": [
 												"api",
-												"cars"
+												"bookings",
+												"cancel",
+												"2"
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "PUT. Attempt to update with missing mandatory fields",
+									"name": "Attempt to Return a Car Without Setting a Return Date",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
 												"exec": [
-													"pm.test(\"Status code is 400\", function () {\r",
-													"    pm.response.to.have.status(400);\r",
-													"});\r",
+													"pm.test(\"Attempt to Return a Car Without Setting a Return Date\", function () {\r",
+													"    // Проверяем статус ответа\r",
+													"    pm.response.to.have.status(200);  // Ожидаем, что запрос выполнится успешно\r",
 													"\r",
-													"pm.test(\"Error message indicates missing fields\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.message).to.include(\"User not authenticated\");\r",
+													"    // Получаем тело ответа\r",
+													"    let jsonData = pm.response.json();\r",
+													"\r",
+													"    // Проверяем, что статус брони изменен на \"CANCELLED\"\r",
+													"    pm.expect(jsonData.carStatus).to.eql(\"CANCELLED\");\r",
+													"\r",
+													"    // Дополнительно, если сервер возвращает ошибку из-за отсутствия даты возврата, проверяем её\r",
+													"    pm.expect(jsonData.message).to.include(\"Return date is required\");\r",
 													"});\r",
 													""
 												],
 												"type": "text/javascript",
 												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -1201,7 +2490,70 @@
 											"bearer": [
 												{
 													"key": "token",
-													"value": "{{ADMIN_accessToken}}",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8xQGNhci1yZW50LmRlIiwiZXhwIjoxNzQzNTgxOTQ2fQ.Y83oN0eBk4RR0jxt4tNfZquQghnKnWpy-OnSJd2L3y4",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/bookings/cancel/{bookingId}",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"bookings",
+												"cancel",
+												"{bookingId}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Attempt to Return a Car with an Incorrect Return Date",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Attempt to Return a Car with an Incorrect Return Date\", function () {\r",
+													"    // Проверяем, что ответ имеет статус ошибки, например, 400\r",
+													"    pm.response.to.have.status(400);  // Ожидаем, что система вернет ошибку при некорректной дате возврата\r",
+													"    \r",
+													"    // Получаем тело ответа\r",
+													"    let jsonData = pm.response.json();\r",
+													"\r",
+													"    // Проверяем, что сообщение об ошибке связано с некорректной датой возврата\r",
+													"    pm.expect(jsonData.message).to.include(\"Invalid return date\");\r",
+													"\r",
+													"    // Также, если возвращается информация о бронировании, проверяем его статус\r",
+													"    pm.expect(jsonData.carStatus).to.eql(\"RENTED\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8xQGNhci1yZW50LmRlIiwiZXhwIjoxNzQzNTgxOTQ2fQ.Y83oN0eBk4RR0jxt4tNfZquQghnKnWpy-OnSJd2L3y4",
 													"type": "string"
 												}
 											]
@@ -1210,7 +2562,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"id\": 1,\r\n  \"brand\": \"BMW\"\r\n}\r\n",
+											"raw": "",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1218,36 +2570,56 @@
 											}
 										},
 										"url": {
-											"raw": "{{URL}}/cars",
+											"raw": "http://localhost:8080/api/bookings/return/{bookingId}?returnDate=2025-03-30T10:00:00",
+											"protocol": "http",
 											"host": [
-												"{{URL}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
-												"cars"
+												"api",
+												"bookings",
+												"return",
+												"{bookingId}"
+											],
+											"query": [
+												{
+													"key": "returnDate",
+													"value": "2025-03-30T10:00:00"
+												}
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "GET. Cars with invalid status",
+									"name": "Attempt to Return a Car While the System is Offline",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
 												"exec": [
-													"pm.test(\"Status code is 400 or 404\", function () {\r",
-													"    pm.expect([400, 404]).to.include(pm.response.code);\r",
-													"});\r",
+													"pm.test(\"Attempt to Return a Car While the System is Offline\", function () {\r",
+													"    // Проверяем, что ответ имеет статус 503 (Service Unavailable)\r",
+													"    pm.response.to.have.status(503);  // Ожидаем статус ошибки, если система оффлайн\r",
+													"    \r",
+													"    // Получаем тело ответа\r",
+													"    let jsonData = pm.response.json();\r",
 													"\r",
-													"pm.test(\"Error message indicates invalid status\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.message).to.include(\"Invalid car status\");\r",
+													"    // Проверяем, что сообщение об ошибке связано с недоступностью системы\r",
+													"    pm.expect(jsonData.message).to.include(\"Service Unavailable\"); // Ожидаем, что сообщение будет содержать \"Service Unavailable\"\r",
 													"});\r",
 													""
 												],
 												"type": "text/javascript",
 												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -1257,23 +2629,104 @@
 											"bearer": [
 												{
 													"key": "token",
-													"value": "{{ADMIN_accessToken}}",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8xQGNhci1yZW50LmRlIiwiZXhwIjoxNzQzNTgxOTQ2fQ.Y83oN0eBk4RR0jxt4tNfZquQghnKnWpy-OnSJd2L3y4",
 													"type": "string"
 												}
 											]
 										},
-										"method": "GET",
+										"method": "PUT",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
-											"raw": "{{URL}}/cars/filter/car-status/INVALID_STATUS",
+											"raw": "http://localhost:8080/api/bookings/return/{bookingId}",
+											"protocol": "http",
 											"host": [
-												"{{URL}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
-												"cars",
-												"filter",
-												"car-status",
-												"INVALID_STATUS"
+												"api",
+												"bookings",
+												"return",
+												"{bookingId}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Attempt to Return a Car That is Already Returned",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Attempt to Return a Car That is Already Returned\", function () {\r",
+													"    // Проверяем, что ответ имеет статус 400 (Bad Request)\r",
+													"    pm.response.to.have.status(400);  // Ожидаем статус ошибки для уже возвращенной машины\r",
+													"    \r",
+													"    // Получаем тело ответа\r",
+													"    let jsonData = pm.response.json();\r",
+													"\r",
+													"    // Проверяем, что сообщение об ошибке указывает на то, что автомобиль уже был возвращен\r",
+													"    pm.expect(jsonData.message).to.include(\"Car already returned\"); // Ожидаем, что сообщение будет содержать \"Car already returned\"\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8xQGNhci1yZW50LmRlIiwiZXhwIjoxNzQzNTgxOTQ2fQ.Y83oN0eBk4RR0jxt4tNfZquQghnKnWpy-OnSJd2L3y4",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/bookings/return/{bookingId}",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"bookings",
+												"return",
+												"{bookingId}"
 											]
 										}
 									},
@@ -1304,19 +2757,20 @@
 													"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
 													"});\r",
 													"\r",
-													"pm.test(\"✅ Response contains a token\", function () {\r",
+													"pm.test(\"✅ Response contains an access token\", function () {\r",
 													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData).to.have.property(\"token\");\r",
+													"    pm.expect(jsonData).to.have.property(\"accessToken\");\r",
 													"});\r",
 													"\r",
-													"pm.test(\"✅ Token is not empty\", function () {\r",
+													"pm.test(\"✅ Access token is not empty\", function () {\r",
 													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.token).to.not.be.empty;\r",
+													"    pm.expect(jsonData.accessToken).to.be.a(\"string\").and.to.not.be.empty;\r",
 													"});\r",
 													"\r",
-													"pm.test(\"✅ Expiry time is valid\", function () {\r",
+													"pm.test(\"✅ Refresh token is present and not empty\", function () {\r",
 													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.expires_in).to.be.a(\"number\").and.to.be.above(0);\r",
+													"    pm.expect(jsonData).to.have.property(\"refreshToken\");\r",
+													"    pm.expect(jsonData.refreshToken).to.be.a(\"string\").and.to.not.be.empty;\r",
 													"});\r",
 													"\r",
 													"console.log(\"✅ Successful login test passed!\");\r",
@@ -1325,9 +2779,22 @@
 												"type": "text/javascript",
 												"packages": {}
 											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
 										}
 									],
 									"request": {
+										"auth": {
+											"type": "noauth"
+										},
 										"method": "POST",
 										"header": [
 											{
@@ -1338,7 +2805,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"admin_1@car-rent.de\",\r\n  \"password\": \"admin-Pass#007\"\r\n}\r\n",
+											"raw": "{\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"Yyyyyyy12345!\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1346,12 +2813,11 @@
 											}
 										},
 										"url": {
-											"raw": "{{URL}}/api/auth/login",
+											"raw": "{{URL}}/auth/login",
 											"host": [
 												"{{URL}}"
 											],
 											"path": [
-												"api",
 												"auth",
 												"login"
 											]
@@ -1371,9 +2837,10 @@
 											"listen": "test",
 											"script": {
 												"exec": [
-													"pm.test(\"❌ Status code is 401\", function () {\r",
-													"    pm.response.to.have.status(401);\r",
+													"pm.test(\"❌ Status code is 403 or 401\", function () {\r",
+													"    pm.expect([403, 401]).to.include(pm.response.code);\r",
 													"});\r",
+													"\r",
 													"\r",
 													"pm.test(\"❌ Response contains error message\", function () {\r",
 													"    var jsonData = pm.response.json();\r",
@@ -1382,10 +2849,20 @@
 													"\r",
 													"pm.test(\"❌ Correct error message\", function () {\r",
 													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.message).to.equal(\"User not authenticated\");\r",
+													"    pm.expect(jsonData.message).to.equal(\"Password or email incorrect\");\r",
 													"});\r",
 													"\r",
 													"console.log(\"❌ Invalid password test passed!\");\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
 													""
 												],
 												"type": "text/javascript",
@@ -1398,7 +2875,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"admin_1@car-rent.de\",\r\n  \"password\": \"wrong-Pass#007\"\r\n}\r\n",
+											"raw": "{\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"yyyyyy1234\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1447,6 +2924,16 @@
 												"type": "text/javascript",
 												"packages": {}
 											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
 										}
 									],
 									"request": {
@@ -1454,7 +2941,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"admin_2@car-rent.de\",\r\n  \"password\": \"admin-Pass#007\"\r\n}\r\n",
+											"raw": "{\r\n  \"email\": \"admi@gmail.com\",\r\n  \"password\": \"Yyyyyyy12345!\"\r\n}\r\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1462,12 +2949,11 @@
 											}
 										},
 										"url": {
-											"raw": "{{URL}}/api/auth/login",
+											"raw": "{{URL}}/auth/login",
 											"host": [
 												"{{URL}}"
 											],
 											"path": [
-												"api",
 												"auth",
 												"login"
 											]
@@ -1502,6 +2988,16 @@
 												"type": "text/javascript",
 												"packages": {}
 											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
 										}
 									],
 									"request": {
@@ -1509,7 +3005,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"admin-Pass#007\"\r\n}\r\n",
+											"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"Yyyyyyy12345!\"\r\n}\r\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1517,12 +3013,11 @@
 											}
 										},
 										"url": {
-											"raw": "{{URL}}/api/auth/login",
+											"raw": "{{URL}}/auth/login",
 											"host": [
 												"{{URL}}"
 											],
 											"path": [
-												"api",
 												"auth",
 												"login"
 											]
@@ -1557,6 +3052,16 @@
 												"type": "text/javascript",
 												"packages": {}
 											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
 										}
 									],
 									"request": {
@@ -1564,7 +3069,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"admin_1@car-rent.de\",\r\n  \"password\": \"\"\r\n}\r\n",
+											"raw": "{\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"\"\r\n}\r\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1572,12 +3077,11 @@
 											}
 										},
 										"url": {
-											"raw": "{{URL}}/api/auth/login",
+											"raw": "{{URL}}/auth/login",
 											"host": [
 												"{{URL}}"
 											],
 											"path": [
-												"api",
 												"auth",
 												"login"
 											]
@@ -1587,221 +3091,37 @@
 								}
 							]
 						}
-					]
-				},
-				{
-					"name": "Return a Car",
-					"item": [
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{ADMIN_accessToken}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
 						{
-							"name": "Return a Car",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"✅ Car successfully returned\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData).to.have.property(\"carStatus\", \"AVAILABLE\");\r",
-											"});\r",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "accessToken",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"id\": {{carId}},\r\n  \"carStatus\": \"AVAILABLE\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/cars",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"cars"
-									]
-								}
-							},
-							"response": []
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
 						},
 						{
-							"name": "Verify Car is No Longer Listed as Rented After Return",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"✅ Car is no longer rented\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData).to.have.property(\"carStatus\", \"AVAILABLE\");\r",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/cars/{{carId}}",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"cars",
-										"{{carId}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Verify Damage Check is Not Mandatory for Returning a Car",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"✅ Damage check is not mandatory\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"id\": {{carId}},\r\n  \"carStatus\": \"AVAILABLE\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/cars",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"cars"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Verify Admin Can Edit the Return Date",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"✅ Admin successfully edited the return date\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData).to.have.property(\"rentalEndDate\", \"2025-04-01T10:00:00.000\");\r",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"rentalEndDate\": \"2025-04-01T10:00:00.000\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/bookings/extend/{{bookingId}}",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"bookings",
-										"extend",
-										"{{bookingId}}"
-									]
-								}
-							},
-							"response": []
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
 						}
 					]
 				}
@@ -2044,7 +3364,14 @@
 											}
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{URL}}/auth/login",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
 										}
 									},
 									"response": []
@@ -2300,6 +3627,28 @@
 					]
 				}
 			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }

@@ -46,7 +46,7 @@ public class AuthorizationTests {
     }
     @Test
     public void testAdminAuthorizationInvalidCredentialsNegativeTest() {
-        app.login().loginWithEmailAndPassword("admi@gmail.com", "Yyyyyyy12345!");
+        app.login().loginWithEmailAndPassword("admi@gmail.com", "yyyyyy12345!");
 
         String expectedMessage = "Password or email incorrect";
         String actualMessage = app.login().getErrorMessage();

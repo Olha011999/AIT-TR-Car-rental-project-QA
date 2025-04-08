@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9640f6d7-bf74-441a-b6ae-6847d4ee8d40" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/car_rent/pages/admin_pages/AddCarPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/car_rent/pages/admin_pages/CarsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/car_rent/rent_page/admin_pages/AddCarPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/src/main/java/car_rent/pages/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/src/main/java/car_rent/pages/AdminPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/src/test/java/car_rent/AuthorizationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/src/test/java/car_rent/AuthorizationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/car_rent/core/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/car_rent/core/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/car_rent/core/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/car_rent/core/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/car_rent/pages/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/car_rent/pages/AdminPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/car_rent/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/car_rent/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test_screenshots" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Postman/CarRentService.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Postman/CarRentService.postman_collection.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Olha011999&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Olha011999/AIT-TR-Car-rental-project-QA.git&quot;,
+    &quot;accountId&quot;: &quot;b4e2033f-d6dc-4634-bb10-230983fa8a56&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2vRKEPRcVpJ28t6FjVKEKGbEH6E" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.AddCarPageTests.allRequiredFieldsShouldBeVisible.executor": "Run",
+    "JUnit.AdminLoginTests.adminAuthorizationEmptyEmailNegativeTest.executor": "Run",
+    "JUnit.AdminLoginTests.adminAuthorizationEmptyPasswordNegativeTest.executor": "Run",
+    "JUnit.AdminLoginTests.adminAuthorizationInvalidCredentialsNegativeTest.executor": "Run",
+    "JUnit.AdminLoginTests.executor": "Run",
+    "JUnit.LoginTests.executor": "Run",
+    "JUnit.RegistrationTests.executor": "Run",
+    "JUnit.RegistrationTests.registrationPositiveTest.executor": "Run",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Tools/Gradle",
+    "onboarding.tips.debug.path": "C:/Users/admin/IdeaProjects/CAR RENTAL SERVICE PROJECT/AIT-TR-Car-rental-project-qa/Car_Rent_Service_JUnit/Car_Rent_Service_JUnit/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\IdeaProjects\CAR RENTAL SERVICE PROJECT\AIT-TR-Car-rental-project-qa\Car_Rent_Service_JUnit\Car_Rent_Service_JUnit\src" />
+      <recent name="C:\Users\admin\IdeaProjects\CAR RENTAL SERVICE PROJECT\AIT-TR-Car-rental-project-qa\Car_Rent_Service_JUnit\Car_Rent_Service_JUnit\src\test\resources" />
+      <recent name="C:\Users\admin\IdeaProjects\CAR RENTAL SERVICE PROJECT\AIT-TR-Car-rental-project-qa\Car_Rent_Service_JUnit\Car_Rent_Service_JUnit" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AddCarPageTests.allRequiredFieldsShouldBeVisible">
+    <configuration name="AddCarPageTests.allRequiredFieldsShouldBeVisible" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car_Rent_Service_JUnit.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="car_rent.rent_page.admin_pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="car_rent.rent_page.admin_pages" />
+      <option name="MAIN_CLASS_NAME" value="car_rent.rent_page.admin_pages.AddCarPageTests" />
+      <option name="METHOD_NAME" value="allRequiredFieldsShouldBeVisible" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminLoginTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car_Rent_Service_JUnit.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="car_rent.rent_page.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="car_rent.rent_page" />
+      <option name="MAIN_CLASS_NAME" value="car_rent.rent_page.AdminLoginTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car_Rent_Service_JUnit.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="car_rent.rent_page.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="car_rent.rent_page" />
+      <option name="MAIN_CLASS_NAME" value="car_rent.rent_page.LoginTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car_Rent_Service_JUnit.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="car_rent.rent_page.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="car_rent.rent_page" />
+      <option name="MAIN_CLASS_NAME" value="car_rent.rent_page.RegistrationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTests.registrationPositiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car_Rent_Service_JUnit.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="car_rent.rent_page.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="car_rent.rent_page" />
+      <option name="MAIN_CLASS_NAME" value="car_rent.rent_page.RegistrationTests" />
+      <option name="METHOD_NAME" value="registrationPositiveTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AddCarPageTests.allRequiredFieldsShouldBeVisible" />
+        <item itemvalue="JUnit.AdminLoginTests" />
+        <item itemvalue="JUnit.RegistrationTests.registrationPositiveTest" />
+        <item itemvalue="JUnit.RegistrationTests" />
+        <item itemvalue="JUnit.LoginTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9640f6d7-bf74-441a-b6ae-6847d4ee8d40" name="Changes" comment="" />
+      <created>1744102336687</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744102336687</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

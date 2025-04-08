@@ -25,10 +25,10 @@ public class AdminPage extends BasePage {
         driver.findElement(carsButton).click();
     }
 
-    private By booringsButton = By.xpath("//*[@id=\"root\"]/div/main/div/div[1]/div/nav/button[3]");
+    private By bookingsButton = By.xpath("//*[@id=\"root\"]/div/main/div/div[1]/div/nav/button[3]");
     public void clickBooringsButton(){
         logger.info("Click the 'Boorings' button");
-        driver.findElement(booringsButton).click();
+        driver.findElement(bookingsButton).click();
     }
 
     private By customersButton = By.xpath("//*[@id=\"root\"]/div/main/div/div[1]/div/nav/button[4]");
