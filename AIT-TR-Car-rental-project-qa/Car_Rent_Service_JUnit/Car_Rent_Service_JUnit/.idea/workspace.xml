@@ -7,20 +7,18 @@
     <list default="true" id="9640f6d7-bf74-441a-b6ae-6847d4ee8d40" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/java/car_rent/pages/admin_pages/AddCarPage.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/car_rent/pages/admin_pages/CarsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/car_rent/rent_page/admin_pages/AddCarPageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/src/main/java/car_rent/pages/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/src/main/java/car_rent/pages/AdminPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/src/test/java/car_rent/AuthorizationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Car_Rent_Service_Gradle/src/test/java/car_rent/AuthorizationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/car_rent/rent_page/admin_pages/AddCarTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/car_rent/core/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/car_rent/core/ApplicationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/car_rent/core/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/car_rent/core/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/car_rent/pages/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/car_rent/pages/AdminPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/car_rent/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/car_rent/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/car_rent/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/car_rent/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/car_rent/rent_page/AdminLoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/car_rent/rent_page/AdminLoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/car_rent/rent_page/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/car_rent/rent_page/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/car_rent/rent_page/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/car_rent/rent_page/RegistrationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test_screenshots" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Postman/CarRentService.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Postman/CarRentService.postman_collection.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,10 +65,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.AddCarPageTests.allRequiredFieldsShouldBeVisible.executor": "Run",
+    "JUnit.AddCarTests.allRequiredFieldsShouldBeVisible.executor": "Run",
+    "JUnit.AddCarTests.executor": "Run",
+    "JUnit.AddCarTests.shouldRejectInvalidRentalPriceNegativeTest.executor": "Run",
+    "JUnit.AddCarTests.shouldShowErrorForInvalidPrice.executor": "Run",
+    "JUnit.AddCarTests.shouldShowErrorsForEmptyFormNegativeTest.executor": "Run",
+    "JUnit.AddCarTests.shouldShowErrorsWhenRequiredFieldsMissingNegativeTest.executor": "Run",
+    "JUnit.AddCarTests.shouldShowSuccessAlertAfterAddingCar.executor": "Run",
+    "JUnit.AddCarTests.shouldShowValidationHintsForEmptyRequiredFieldsNegativeTest.executor": "Run",
     "JUnit.AdminLoginTests.adminAuthorizationEmptyEmailNegativeTest.executor": "Run",
     "JUnit.AdminLoginTests.adminAuthorizationEmptyPasswordNegativeTest.executor": "Run",
     "JUnit.AdminLoginTests.adminAuthorizationInvalidCredentialsNegativeTest.executor": "Run",
     "JUnit.AdminLoginTests.executor": "Run",
+    "JUnit.LoginTests.authorizationPositiveTest.executor": "Run",
     "JUnit.LoginTests.executor": "Run",
     "JUnit.RegistrationTests.executor": "Run",
     "JUnit.RegistrationTests.registrationPositiveTest.executor": "Run",
@@ -93,8 +100,8 @@
       <recent name="C:\Users\admin\IdeaProjects\CAR RENTAL SERVICE PROJECT\AIT-TR-Car-rental-project-qa\Car_Rent_Service_JUnit\Car_Rent_Service_JUnit" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddCarPageTests.allRequiredFieldsShouldBeVisible">
-    <configuration name="AddCarPageTests.allRequiredFieldsShouldBeVisible" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AdminLoginTests">
+    <configuration name="AddCarTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Car_Rent_Service_JUnit.test" />
       <extension name="coverage">
         <pattern>
@@ -103,8 +110,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="car_rent.rent_page.admin_pages" />
-      <option name="MAIN_CLASS_NAME" value="car_rent.rent_page.admin_pages.AddCarPageTests" />
-      <option name="METHOD_NAME" value="allRequiredFieldsShouldBeVisible" />
+      <option name="MAIN_CLASS_NAME" value="car_rent.rent_page.admin_pages.AddCarTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddCarTests.shouldShowErrorsWhenRequiredFieldsMissingNegativeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car_Rent_Service_JUnit.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="car_rent.rent_page.admin_pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="car_rent.rent_page.admin_pages" />
+      <option name="MAIN_CLASS_NAME" value="car_rent.rent_page.admin_pages.AddCarTests" />
+      <option name="METHOD_NAME" value="shouldShowErrorsWhenRequiredFieldsMissingNegativeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddCarTests.shouldShowValidationHintsForEmptyRequiredFieldsNegativeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car_Rent_Service_JUnit.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="car_rent.rent_page.admin_pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="car_rent.rent_page.admin_pages" />
+      <option name="MAIN_CLASS_NAME" value="car_rent.rent_page.admin_pages.AddCarTests" />
+      <option name="METHOD_NAME" value="shouldShowValidationHintsForEmptyRequiredFieldsNegativeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,44 +178,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Car_Rent_Service_JUnit.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="car_rent.rent_page.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="car_rent.rent_page" />
-      <option name="MAIN_CLASS_NAME" value="car_rent.rent_page.RegistrationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationTests.registrationPositiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Car_Rent_Service_JUnit.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="car_rent.rent_page.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="car_rent.rent_page" />
-      <option name="MAIN_CLASS_NAME" value="car_rent.rent_page.RegistrationTests" />
-      <option name="METHOD_NAME" value="registrationPositiveTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddCarPageTests.allRequiredFieldsShouldBeVisible" />
         <item itemvalue="JUnit.AdminLoginTests" />
-        <item itemvalue="JUnit.RegistrationTests.registrationPositiveTest" />
-        <item itemvalue="JUnit.RegistrationTests" />
         <item itemvalue="JUnit.LoginTests" />
+        <item itemvalue="JUnit.AddCarTests" />
+        <item itemvalue="JUnit.AddCarTests.shouldShowValidationHintsForEmptyRequiredFieldsNegativeTest" />
+        <item itemvalue="JUnit.AddCarTests.shouldShowErrorsWhenRequiredFieldsMissingNegativeTest" />
       </list>
     </recent_temporary>
   </component>

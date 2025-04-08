@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.time.Duration;
+import java.util.List;
 import java.util.logging.Logger;
 
 public class AddCarPage extends AdminPage {
@@ -16,14 +17,14 @@ public class AddCarPage extends AdminPage {
         super(driver, wait);
     }
 
-    public By brand = By.name("brand");
-    public By model = By.name("model");
-    public By year = By.name("year");
-    public By bodyType = By.name("bodyType");
-    public By fuelType = By.name("fuelType");
-    public By transmissionType = By.name("transmissionType");
-    public By pricePerDay = By.name("dayRentalPrice");
-    public By image = By.name("carImage");
+    private By brand = By.name("brand");
+    private By model = By.name("model");
+    private By year = By.name("year");
+    private By bodyType = By.cssSelector("select[name='type']");
+    private By fuelType = By.name("fuelType");
+    private By transmissionType = By.name("transmissionType");
+    private By pricePerDay = By.name("dayRentalPrice");
+    private By image = By.name("carImage");
     public By saveButton = By.xpath("//*[@id=\"root\"]/div/main/div/div[2]/div/form/div[2]/button");
 
     public void fillCarForm(String brandText, String modelText, String yearText,
@@ -141,4 +142,19 @@ public class AddCarPage extends AdminPage {
             return false;
         }
     }
-}
+
+    public boolean isPriceValidationHintVisible(String expectedHintText) {
+        try {
+            WebElement hint = driver.findElement(By.xpath("//p[contains(text(),'Price must be more than 0')]"));
+            return hint.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public boolean isValidationHintVisible (String expectedText) {
+            List<WebElement> hints = driver.findElements(By.xpath("//*[contains(@class,'text-red-500') and (self::p or self::div)]"));
+            return hints.stream().anyMatch(e -> e.getText().trim().equals(expectedText));
+        }
+
+    }

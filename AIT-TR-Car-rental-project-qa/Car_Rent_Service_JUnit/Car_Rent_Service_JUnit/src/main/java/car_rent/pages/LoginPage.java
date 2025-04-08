@@ -2,11 +2,15 @@ package car_rent.pages;
 
 import car_rent.core.BasePage;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class LoginPage extends BasePage {
 
@@ -15,21 +19,21 @@ public class LoginPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = "input[name='email']")
-    WebElement userEmail;
+    @FindBy(name = "email")
+    WebElement email;
 
-    @FindBy(css = "input[name='password']")
-    WebElement userPassword;
+    @FindBy(name = "password")
+    WebElement password;
 
-    @FindBy(css = "button[type='submit']")
+    @FindBy(xpath = "//button[contains(text(),'Login')]")
     WebElement loginButton;
 
     public void enterEmail(String email) {
-        userEmail.sendKeys(email);
+        this.email.sendKeys(email);
     }
 
     public void enterPassword(String password) {
-        userPassword.sendKeys(password);
+        this.password.sendKeys(password);
     }
 
     public void clickLoginButton() {

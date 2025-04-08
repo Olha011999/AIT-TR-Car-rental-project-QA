@@ -11,7 +11,7 @@ public class RegistrationTests extends TestBase {
 
     @BeforeEach
     public void setUp() {
-        new HomePage(app.driver, app.wait).selectLogin();
+        new HomePage(app.driver, app.wait).clickLoginPage();
         new RegistrationPage(app.driver, app.wait).clickSignUp();
     }
 

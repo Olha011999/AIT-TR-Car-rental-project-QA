@@ -16,25 +16,28 @@ public class AdminPage extends BasePage {
             PageFactory.initElements(driver, this);
         }
 
-        @FindBy(xpath = "//a[normalize-space(text())='Admin']")
-        private WebElement adminElement;
 
-        // Метод для ожидания элемента "My Account"
-        public boolean isMyAccountVisible() {
-            try {
-                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-                wait.until(ExpectedConditions.visibilityOf(adminElement)); //ожидания видимости элемента
-                return adminElement.isDisplayed();
-            } catch (Exception e) {
-                if (driver instanceof TakesScreenshot) {
-                    String screenshotPath = takeScreenshot(); // Метод из TestBase
-                    System.out.println("Error checking the item. Screenshot:" + screenshotPath);
-                }
-                return false;
+    @FindBy(xpath = "//a[contains(text(),'Admin')]")
+    WebElement adminAccount;
+    public void goToAdmin() {
+        adminAccount.click();
+    }
+    // Метод для ожидания элемента "My Account"
+    public boolean isMyAccountVisible() {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+            wait.until(ExpectedConditions.visibilityOf(adminAccount)); //ожидания видимости элемента
+            return adminAccount.isDisplayed();
+        } catch (Exception e) {
+            if (driver instanceof TakesScreenshot) {
+                String screenshotPath = takeScreenshot(); // Метод из TestBase
+                System.out.println("Error checking the item. Screenshot:" + screenshotPath);
             }
+            return false;
         }
+    }
 
-    private By addCarButton = By.xpath("//*[@id=\"root\"]/div/main/div/div[1]/div/nav/button[1]");
+    private By addCarButton = By.xpath("//button[contains(text(),'Add car')]");
 
     public void clickAddCar() {
         logger.info("Click the 'Add car' button");
@@ -80,5 +83,18 @@ public class AdminPage extends BasePage {
         }
     }
 
+    public void scrollDownSlowly() throws InterruptedException {
+        long lastHeight = (long) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight");
 
+        while (true) {
+            ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+            Thread.sleep(1000); // даём странице догрузить данные
+
+            long newHeight = (long) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight");
+            if (newHeight == lastHeight) {
+                break; // больше не грузится — стоп
+            }
+            lastHeight = newHeight;
+        }
+    }
 }
