@@ -1,0 +1,1807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Car_rent_servise">
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Car_rent">
+        <intProp name="ThreadGroup.num_threads">60</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HomePage Request">
+          <stringProp name="HTTPSampler.domain">car-rental-cymg8.ondigitalocean.app</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/#</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion 200">
+          <collectionProp name="Asserion.test_strings">
+            <stringProp name="49586">200</stringProp>
+          </collectionProp>
+          <stringProp name="Assertion.custom_message"></stringProp>
+          <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+          <boolProp name="Assertion.assume_success">false</boolProp>
+          <intProp name="Assertion.test_type">8</intProp>
+        </ResponseAssertion>
+        <hashTree/>
+        <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results">
+          <boolProp name="ResultCollector.error_logging">true</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request Login">
+          <stringProp name="HTTPSampler.domain">car-rental-cymg8.ondigitalocean.app</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/auth/login</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;email&quot;: &quot;test43@gmail.com&quot;,&#xd;
+  &quot;password&quot;: &quot;Password1@&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request Admin Authorization">
+          <stringProp name="HTTPSampler.domain">car-rental-cymg8.ondigitalocean.app</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/customers/find-me</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;email&quot;: &quot;admin@gmail.com&quot;,&#xd;
+  &quot;password&quot;: &quot;Yyyyyyy12345!&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request Cars">
+          <stringProp name="HTTPSampler.domain">car-rental-cymg8.ondigitalocean.app</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/cars</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;brand&quot;: &quot;Toyota&quot;,&#xd;
+  &quot;model&quot;: &quot;Camry&quot;,&#xd;
+  &quot;year&quot;: 2023,&#xd;
+  &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+  &quot;type&quot;: &quot;SEDAN&quot;,&#xd;
+  &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+  &quot;transmissionType&quot;: &quot;MANUAL&quot;,&#xd;
+  &quot;dayRentalPrice&quot;: 122,&#xd;
+  &quot;carImage&quot;: &quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request bookings">
+          <stringProp name="HTTPSampler.domain">car-rental-cymg8.ondigitalocean.app</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/bookings</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+  {&#xd;
+    &quot;id&quot;: 2,&#xd;
+    &quot;rentalStartDate&quot;: &quot;2025-04-01T09:53&quot;,&#xd;
+    &quot;rentalEndDate&quot;: &quot;2025-04-25T09:53&quot;,&#xd;
+    &quot;customerDto&quot;: {&#xd;
+      &quot;id&quot;: 1,&#xd;
+      &quot;firstName&quot;: &quot;Max&quot;,&#xd;
+      &quot;lastName&quot;: &quot;Mustermann&quot;,&#xd;
+      &quot;email&quot;: &quot;hatedi2854@deenur.com&quot;,&#xd;
+      &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+      &quot;isActive&quot;: true&#xd;
+    },&#xd;
+    &quot;carDto&quot;: {&#xd;
+      &quot;id&quot;: 2,&#xd;
+      &quot;brand&quot;: &quot;Honda&quot;,&#xd;
+      &quot;model&quot;: &quot;Civic&quot;,&#xd;
+      &quot;year&quot;: 2018,&#xd;
+      &quot;type&quot;: &quot;SEDAN&quot;,&#xd;
+      &quot;fuelType&quot;: &quot;DIESEL&quot;,&#xd;
+      &quot;transmissionType&quot;: &quot;MANUAL&quot;,&#xd;
+      &quot;isActive&quot;: true,&#xd;
+      &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+      &quot;dayRentalPrice&quot;: 90,&#xd;
+      &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/2_1744188206561.jpg&quot;&#xd;
+    },&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;bookingStatus&quot;: &quot;ACTIVE&quot;,&#xd;
+    &quot;createBookingDate&quot;: &quot;2025-03-01T10:30:38&quot;,&#xd;
+    &quot;updateBookingDate&quot;: &quot;2025-04-04T09:53:38&quot;,&#xd;
+    &quot;totalPrice&quot;: 2137.5&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 3,&#xd;
+    &quot;rentalStartDate&quot;: &quot;2025-04-04T09:53&quot;,&#xd;
+    &quot;rentalEndDate&quot;: &quot;2025-04-14T09:53&quot;,&#xd;
+    &quot;customerDto&quot;: {&#xd;
+      &quot;id&quot;: 6,&#xd;
+      &quot;firstName&quot;: &quot;Admin&quot;,&#xd;
+      &quot;lastName&quot;: &quot;Admin&quot;,&#xd;
+      &quot;email&quot;: &quot;admin@gmail.com&quot;,&#xd;
+      &quot;role&quot;: &quot;ROLE_ADMIN&quot;,&#xd;
+      &quot;isActive&quot;: true&#xd;
+    },&#xd;
+    &quot;carDto&quot;: {&#xd;
+      &quot;id&quot;: 14,&#xd;
+      &quot;brand&quot;: &quot;Land Rover&quot;,&#xd;
+      &quot;model&quot;: &quot;Range Rover&quot;,&#xd;
+      &quot;year&quot;: 2023,&#xd;
+      &quot;type&quot;: &quot;SUV&quot;,&#xd;
+      &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+      &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+      &quot;isActive&quot;: true,&#xd;
+      &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+      &quot;dayRentalPrice&quot;: 150,&#xd;
+      &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/14_1744197571772.jpg&quot;&#xd;
+    },&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;bookingStatus&quot;: &quot;ACTIVE&quot;,&#xd;
+    &quot;createBookingDate&quot;: &quot;2025-04-04T09:53:38&quot;,&#xd;
+    &quot;updateBookingDate&quot;: &quot;2025-04-04T09:53:38&quot;,&#xd;
+    &quot;totalPrice&quot;: 2500&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 4,&#xd;
+    &quot;rentalStartDate&quot;: &quot;2025-04-04T09:53&quot;,&#xd;
+    &quot;rentalEndDate&quot;: &quot;2025-04-14T09:53&quot;,&#xd;
+    &quot;customerDto&quot;: {&#xd;
+      &quot;id&quot;: 6,&#xd;
+      &quot;firstName&quot;: &quot;Admin&quot;,&#xd;
+      &quot;lastName&quot;: &quot;Admin&quot;,&#xd;
+      &quot;email&quot;: &quot;admin@gmail.com&quot;,&#xd;
+      &quot;role&quot;: &quot;ROLE_ADMIN&quot;,&#xd;
+      &quot;isActive&quot;: true&#xd;
+    },&#xd;
+    &quot;carDto&quot;: {&#xd;
+      &quot;id&quot;: 13,&#xd;
+      &quot;brand&quot;: &quot;Porsche&quot;,&#xd;
+      &quot;model&quot;: &quot;911&quot;,&#xd;
+      &quot;year&quot;: 2019,&#xd;
+      &quot;type&quot;: &quot;COUPE&quot;,&#xd;
+      &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+      &quot;transmissionType&quot;: &quot;MANUAL&quot;,&#xd;
+      &quot;isActive&quot;: true,&#xd;
+      &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+      &quot;dayRentalPrice&quot;: 300,&#xd;
+      &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/13_1744197020755.jpg&quot;&#xd;
+    },&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;bookingStatus&quot;: &quot;ACTIVE&quot;,&#xd;
+    &quot;createBookingDate&quot;: &quot;2025-04-04T09:53:38&quot;,&#xd;
+    &quot;updateBookingDate&quot;: &quot;2025-04-04T09:53:38&quot;,&#xd;
+    &quot;totalPrice&quot;: 3000&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 20,&#xd;
+    &quot;rentalStartDate&quot;: &quot;2025-04-12T12:43&quot;,&#xd;
+    &quot;rentalEndDate&quot;: &quot;2025-04-21T12:43&quot;,&#xd;
+    &quot;customerDto&quot;: {&#xd;
+      &quot;id&quot;: 2,&#xd;
+      &quot;firstName&quot;: &quot;Liana&quot;,&#xd;
+      &quot;lastName&quot;: &quot;Kes&quot;,&#xd;
+      &quot;email&quot;: &quot;lianakes@gmail.com&quot;,&#xd;
+      &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+      &quot;isActive&quot;: true&#xd;
+    },&#xd;
+    &quot;carDto&quot;: {&#xd;
+      &quot;id&quot;: 1,&#xd;
+      &quot;brand&quot;: &quot;Toyota&quot;,&#xd;
+      &quot;model&quot;: &quot;Camry&quot;,&#xd;
+      &quot;year&quot;: 2020,&#xd;
+      &quot;type&quot;: &quot;SEDAN&quot;,&#xd;
+      &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+      &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+      &quot;isActive&quot;: true,&#xd;
+      &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+      &quot;dayRentalPrice&quot;: 80000000,&#xd;
+      &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/1_1744187410365.jpg&quot;&#xd;
+    },&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;bookingStatus&quot;: &quot;PENDING&quot;,&#xd;
+    &quot;createBookingDate&quot;: &quot;2025-04-04T12:43:01&quot;,&#xd;
+    &quot;updateBookingDate&quot;: &quot;2025-04-04T12:43:14&quot;,&#xd;
+    &quot;totalPrice&quot;: 900&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 21,&#xd;
+    &quot;rentalStartDate&quot;: &quot;2025-04-09T13:14&quot;,&#xd;
+    &quot;rentalEndDate&quot;: &quot;2025-04-11T13:13&quot;,&#xd;
+    &quot;customerDto&quot;: {&#xd;
+      &quot;id&quot;: 3,&#xd;
+      &quot;firstName&quot;: &quot;Masha&quot;,&#xd;
+      &quot;lastName&quot;: &quot;Neshyna&quot;,&#xd;
+      &quot;email&quot;: &quot;mn!1@com&quot;,&#xd;
+      &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+      &quot;isActive&quot;: true&#xd;
+    },&#xd;
+    &quot;carDto&quot;: {&#xd;
+      &quot;id&quot;: 5,&#xd;
+      &quot;brand&quot;: &quot;Ford&quot;,&#xd;
+      &quot;model&quot;: &quot;F-150&quot;,&#xd;
+      &quot;year&quot;: 2023,&#xd;
+      &quot;type&quot;: &quot;TRUCK&quot;,&#xd;
+      &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+      &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+      &quot;isActive&quot;: true,&#xd;
+      &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+      &quot;dayRentalPrice&quot;: 20,&#xd;
+      &quot;carImage&quot;: &quot;&quot;&#xd;
+    },&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;bookingStatus&quot;: &quot;PENDING&quot;,&#xd;
+    &quot;createBookingDate&quot;: &quot;2025-04-04T13:13:51&quot;,&#xd;
+    &quot;updateBookingDate&quot;: &quot;2025-04-04T13:13:44&quot;,&#xd;
+    &quot;totalPrice&quot;: 240&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 22,&#xd;
+    &quot;rentalStartDate&quot;: &quot;2025-04-20T13:16&quot;,&#xd;
+    &quot;rentalEndDate&quot;: &quot;2025-05-01T13:15&quot;,&#xd;
+    &quot;customerDto&quot;: {&#xd;
+      &quot;id&quot;: 5,&#xd;
+      &quot;firstName&quot;: &quot;John&quot;,&#xd;
+      &quot;lastName&quot;: &quot;Doe&quot;,&#xd;
+      &quot;email&quot;: &quot;pedat3980211@bariswc.com&quot;,&#xd;
+      &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+      &quot;isActive&quot;: true&#xd;
+    },&#xd;
+    &quot;carDto&quot;: {&#xd;
+      &quot;id&quot;: 7,&#xd;
+      &quot;brand&quot;: &quot;Chevrolet&quot;,&#xd;
+      &quot;model&quot;: &quot;Malibu&quot;,&#xd;
+      &quot;year&quot;: 2019,&#xd;
+      &quot;type&quot;: &quot;SEDAN&quot;,&#xd;
+      &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+      &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+      &quot;isActive&quot;: true,&#xd;
+      &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+      &quot;dayRentalPrice&quot;: 110,&#xd;
+      &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/7_1744195390293.jpg&quot;&#xd;
+    },&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;bookingStatus&quot;: &quot;PENDING&quot;,&#xd;
+    &quot;createBookingDate&quot;: &quot;2025-04-04T13:15:50&quot;,&#xd;
+    &quot;updateBookingDate&quot;: &quot;2025-04-04T13:16:28&quot;,&#xd;
+    &quot;totalPrice&quot;: 1440&#xd;
+  }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+              <stringProp name="0"></stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request all cars">
+          <stringProp name="HTTPSampler.domain">car-rental-cymg8.ondigitalocean.app</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/cars/all</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+  {&#xd;
+    &quot;id&quot;: 12,&#xd;
+    &quot;brand&quot;: &quot;Hyundai&quot;,&#xd;
+    &quot;model&quot;: &quot;Santa Fe&quot;,&#xd;
+    &quot;year&quot;: 2021,&#xd;
+    &quot;type&quot;: &quot;SUV&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;DIESEL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;RENTED&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 140,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/12_1744196777010.jpg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 2,&#xd;
+    &quot;brand&quot;: &quot;Honda&quot;,&#xd;
+    &quot;model&quot;: &quot;Civic&quot;,&#xd;
+    &quot;year&quot;: 2018,&#xd;
+    &quot;type&quot;: &quot;SEDAN&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;DIESEL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;MANUAL&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 90,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/2_1744188206561.jpg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 35,&#xd;
+    &quot;brand&quot;: &quot;Toyota&quot;,&#xd;
+    &quot;model&quot;: &quot;Camry&quot;,&#xd;
+    &quot;year&quot;: 2023,&#xd;
+    &quot;type&quot;: &quot;SEDAN&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;MANUAL&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 122,&#xd;
+    &quot;carImage&quot;: &quot;&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 7,&#xd;
+    &quot;brand&quot;: &quot;Chevrolet&quot;,&#xd;
+    &quot;model&quot;: &quot;Malibu&quot;,&#xd;
+    &quot;year&quot;: 2019,&#xd;
+    &quot;type&quot;: &quot;SEDAN&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 110,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/7_1744195390293.jpg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 8,&#xd;
+    &quot;brand&quot;: &quot;Nissan&quot;,&#xd;
+    &quot;model&quot;: &quot;Altima&quot;,&#xd;
+    &quot;year&quot;: 2021,&#xd;
+    &quot;type&quot;: &quot;SEDAN&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 95,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/8_1744195433885.jpg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 4,&#xd;
+    &quot;brand&quot;: &quot;Tesla&quot;,&#xd;
+    &quot;model&quot;: &quot;Model S&quot;,&#xd;
+    &quot;year&quot;: 2021,&#xd;
+    &quot;type&quot;: &quot;SEDAN&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;ELECTRIC&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 150,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/4_1744195303777.jpg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 1,&#xd;
+    &quot;brand&quot;: &quot;Toyota&quot;,&#xd;
+    &quot;model&quot;: &quot;Camry&quot;,&#xd;
+    &quot;year&quot;: 2020,&#xd;
+    &quot;type&quot;: &quot;SEDAN&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 80000000,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/1_1744187410365.jpg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 34,&#xd;
+    &quot;brand&quot;: &quot;Toyota&quot;,&#xd;
+    &quot;model&quot;: &quot;Corolla&quot;,&#xd;
+    &quot;year&quot;: 2020,&#xd;
+    &quot;type&quot;: &quot;SEDAN&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 100,&#xd;
+    &quot;carImage&quot;: &quot;&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 9,&#xd;
+    &quot;brand&quot;: &quot;Mazda&quot;,&#xd;
+    &quot;model&quot;: &quot;Mazda 3&quot;,&#xd;
+    &quot;year&quot;: 2022,&#xd;
+    &quot;type&quot;: &quot;HATCHBACK&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;MANUAL&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 90,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/9_1744195451167.jpg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 13,&#xd;
+    &quot;brand&quot;: &quot;Porsche&quot;,&#xd;
+    &quot;model&quot;: &quot;911&quot;,&#xd;
+    &quot;year&quot;: 2019,&#xd;
+    &quot;type&quot;: &quot;COUPE&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;MANUAL&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 300,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/13_1744197020755.jpg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 6,&#xd;
+    &quot;brand&quot;: &quot;Audi&quot;,&#xd;
+    &quot;model&quot;: &quot;Q7&quot;,&#xd;
+    &quot;year&quot;: 2020,&#xd;
+    &quot;type&quot;: &quot;SUV&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;DIESEL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 200,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/6_1744195372539.jpg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 3,&#xd;
+    &quot;brand&quot;: &quot;BMW&quot;,&#xd;
+    &quot;model&quot;: &quot;X5&quot;,&#xd;
+    &quot;year&quot;: 2022,&#xd;
+    &quot;type&quot;: &quot;SUV&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;HYBRID&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 150,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/3_1744195262583.jpg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 15,&#xd;
+    &quot;brand&quot;: &quot;Jeep&quot;,&#xd;
+    &quot;model&quot;: &quot;Grand Cherokee&quot;,&#xd;
+    &quot;year&quot;: 2020,&#xd;
+    &quot;type&quot;: &quot;SUV&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 60,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/15_1744198037073.jpg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 11,&#xd;
+    &quot;brand&quot;: &quot;Kia&quot;,&#xd;
+    &quot;model&quot;: &quot;Sportage&quot;,&#xd;
+    &quot;year&quot;: 2022,&#xd;
+    &quot;type&quot;: &quot;SUV&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;HYBRID&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 130,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/11_1744195946285.jpeg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 14,&#xd;
+    &quot;brand&quot;: &quot;Land Rover&quot;,&#xd;
+    &quot;model&quot;: &quot;Range Rover&quot;,&#xd;
+    &quot;year&quot;: 2023,&#xd;
+    &quot;type&quot;: &quot;SUV&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 150,&#xd;
+    &quot;carImage&quot;: &quot;https://car-rental-ait.fra1.digitaloceanspaces.com/cars/14_1744197571772.jpg&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 10,&#xd;
+    &quot;brand&quot;: &quot;Mercedes-Benz&quot;,&#xd;
+    &quot;model&quot;: &quot;GLC&quot;,&#xd;
+    &quot;year&quot;: 2020,&#xd;
+    &quot;type&quot;: &quot;SUV&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 80,&#xd;
+    &quot;carImage&quot;: &quot;&quot;&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 5,&#xd;
+    &quot;brand&quot;: &quot;Ford&quot;,&#xd;
+    &quot;model&quot;: &quot;F-150&quot;,&#xd;
+    &quot;year&quot;: 2023,&#xd;
+    &quot;type&quot;: &quot;TRUCK&quot;,&#xd;
+    &quot;fuelType&quot;: &quot;PETROL&quot;,&#xd;
+    &quot;transmissionType&quot;: &quot;AUTOMATIC&quot;,&#xd;
+    &quot;isActive&quot;: true,&#xd;
+    &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+    &quot;dayRentalPrice&quot;: 20,&#xd;
+    &quot;carImage&quot;: &quot;&quot;&#xd;
+  }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request customers">
+          <stringProp name="HTTPSampler.domain"> car-rental-cymg8.ondigitalocean.app</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/customers</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+  {&#xd;
+    &quot;id&quot;: 1,&#xd;
+    &quot;firstName&quot;: &quot;Max&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Mustermann&quot;,&#xd;
+    &quot;email&quot;: &quot;hatedi2854@deenur.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 2,&#xd;
+    &quot;firstName&quot;: &quot;Liana&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Kes&quot;,&#xd;
+    &quot;email&quot;: &quot;lianakes@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 3,&#xd;
+    &quot;firstName&quot;: &quot;Masha&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Neshyna&quot;,&#xd;
+    &quot;email&quot;: &quot;mn!1@com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 4,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Doe&quot;,&#xd;
+    &quot;email&quot;: &quot;pedat39801@bariswc.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 5,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Doe&quot;,&#xd;
+    &quot;email&quot;: &quot;pedat3980211@bariswc.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 6,&#xd;
+    &quot;firstName&quot;: &quot;Admin&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Admin&quot;,&#xd;
+    &quot;email&quot;: &quot;admin@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_ADMIN&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 7,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test43@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 8,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test432@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 9,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test4321@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 10,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test43210@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 11,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test123@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 12,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test1234@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 13,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test12345@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 14,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test_123@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 15,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test_1234@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 16,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test_12345@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 17,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test_123456@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 18,&#xd;
+    &quot;firstName&quot;: &quot;Firstname&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Lastname&quot;,&#xd;
+    &quot;email&quot;: &quot;test43test1@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 19,&#xd;
+    &quot;firstName&quot;: &quot;API&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Postman&quot;,&#xd;
+    &quot;email&quot;: &quot;user@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 20,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test_12345688@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 21,&#xd;
+    &quot;firstName&quot;: &quot;Neshyna1&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Neshyna!&quot;,&#xd;
+    &quot;email&quot;: &quot;neshyna.test.ait@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 22,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test_123456880@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 23,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow2&quot;,&#xd;
+    &quot;email&quot;: &quot;test_1234568801@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 24,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow3&quot;,&#xd;
+    &quot;email&quot;: &quot;test_test_1@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 25,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow_test1@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 26,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test1744045744843@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 27,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test1744045782960@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 28,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test1744045878011@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 29,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow2_test1@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 30,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow3_test1@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 31,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow4_test1@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 32,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744055591209@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 33,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744055609537@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 34,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744055663541@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 35,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744055687504@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 36,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744055713466@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 37,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744055765527@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 38,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744055813735@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 39,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744055839137@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 40,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744055857558@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 41,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744056064513@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 42,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744056098315@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 43,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744056640675@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 44,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744056678577@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 45,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744056759354@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 46,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744056798501@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 47,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744056816896@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 48,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744056879394@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 49,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744058973255@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 50,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744059032151@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 51,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744059053833@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 52,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744059085593@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 53,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow5_test1@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 54,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test43@gmail.c&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 55,&#xd;
+    &quot;firstName&quot;: &quot;Kateryna&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Kibirieva&quot;,&#xd;
+    &quot;email&quot;: &quot;denamat643@bariswc.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 56,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Doe&quot;,&#xd;
+    &quot;email&quot;: &quot;vawog28993@noroasis.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 57,&#xd;
+    &quot;firstName&quot;: &quot;Nino&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Nino&quot;,&#xd;
+    &quot;email&quot;: &quot;hafem37043@provko.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 58,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744107180211@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 59,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744107196708@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 60,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744107225587@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 61,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test43@com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 62,&#xd;
+    &quot;firstName&quot;: &quot;Ben&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Tugend &quot;,&#xd;
+    &quot;email&quot;: &quot;nalofo5825@provko.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 63,&#xd;
+    &quot;firstName&quot;: &quot;Ted&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Mosbi&quot;,&#xd;
+    &quot;email&quot;: &quot;lobenen442@noroasis.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 64,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744110448182@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 65,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744110493925@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 66,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 67,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744110891421@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 68,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744110959012@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 69,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744111047416@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 70,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744111659613@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 71,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744111686493@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 72,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test411111@com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 73,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test41111@gmail.c&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 74,&#xd;
+    &quot;firstName&quot;: &quot;Ali&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Ali&quot;,&#xd;
+    &quot;email&quot;: &quot;nojejew940@noroasis.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 75,&#xd;
+    &quot;firstName&quot;: &quot;Emi&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Emi&quot;,&#xd;
+    &quot;email&quot;: &quot;ralobow256@provko.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 76,&#xd;
+    &quot;firstName&quot;: &quot;Alla&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Nazarenko&quot;,&#xd;
+    &quot;email&quot;: &quot;umnyj.start@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: true&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 77,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow1744133575004@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 78,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test433@com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 79,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow5767_test1@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 80,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;johnsnow55_test1@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 81,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test4331744152798203@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 82,&#xd;
+    &quot;firstName&quot;: &quot;Arya&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Stark&quot;,&#xd;
+    &quot;email&quot;: &quot;t.4331744152798204@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 83,&#xd;
+    &quot;firstName&quot;: &quot;Tyrion&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Lannister&quot;,&#xd;
+    &quot;email&quot;: &quot;user_name12331744152798204@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 84,&#xd;
+    &quot;firstName&quot;: &quot;Daenerys&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Targaryen&quot;,&#xd;
+    &quot;email&quot;: &quot;test-4331744152798205@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 85,&#xd;
+    &quot;firstName&quot;: &quot;Sansa&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Stark&quot;,&#xd;
+    &quot;email&quot;: &quot;test433.plus1744152798205@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 86,&#xd;
+    &quot;firstName&quot;: &quot;Cersei&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Lannister&quot;,&#xd;
+    &quot;email&quot;: &quot;test433@subdomain1744152798205.gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 87,&#xd;
+    &quot;firstName&quot;: &quot;Jon&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test433.email1744152798205@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 88,&#xd;
+    &quot;firstName&quot;: &quot;Ned&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Stark&quot;,&#xd;
+    &quot;email&quot;: &quot;test_4331744152798205@example.co&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 89,&#xd;
+    &quot;firstName&quot;: &quot;Robb&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Stark&quot;,&#xd;
+    &quot;email&quot;: &quot;test433@googlemail1744152798205.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 90,&#xd;
+    &quot;firstName&quot;: &quot;Bran&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Stark&quot;,&#xd;
+    &quot;email&quot;: &quot;user.test331744152798205@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 91,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test4331744152873913@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 92,&#xd;
+    &quot;firstName&quot;: &quot;Arya&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Stark&quot;,&#xd;
+    &quot;email&quot;: &quot;t.4331744152873914@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 93,&#xd;
+    &quot;firstName&quot;: &quot;Tyrion&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Lannister&quot;,&#xd;
+    &quot;email&quot;: &quot;user_name12331744152873914@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 94,&#xd;
+    &quot;firstName&quot;: &quot;Daenerys&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Targaryen&quot;,&#xd;
+    &quot;email&quot;: &quot;test-4331744152873914@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 95,&#xd;
+    &quot;firstName&quot;: &quot;Sansa&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Stark&quot;,&#xd;
+    &quot;email&quot;: &quot;test433.plus1744152873914@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 96,&#xd;
+    &quot;firstName&quot;: &quot;Cersei&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Lannister&quot;,&#xd;
+    &quot;email&quot;: &quot;test433@subdomain1744152873914.gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 97,&#xd;
+    &quot;firstName&quot;: &quot;Jon&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test433.email1744152873914@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 98,&#xd;
+    &quot;firstName&quot;: &quot;Ned&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Stark&quot;,&#xd;
+    &quot;email&quot;: &quot;test_4331744152873914@example.co&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 99,&#xd;
+    &quot;firstName&quot;: &quot;Robb&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Stark&quot;,&#xd;
+    &quot;email&quot;: &quot;test433@googlemail1744152873914.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 100,&#xd;
+    &quot;firstName&quot;: &quot;Bran&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Stark&quot;,&#xd;
+    &quot;email&quot;: &quot;user.test331744152873914@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 101,&#xd;
+    &quot;firstName&quot;: &quot;Jon&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Snow&quot;,&#xd;
+    &quot;email&quot;: &quot;test4331744152970746@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 102,&#xd;
+    &quot;firstName&quot;: &quot;Elena&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Karsten&quot;,&#xd;
+    &quot;email&quot;: &quot;elenakarsten.ait@gmail.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  },&#xd;
+  {&#xd;
+    &quot;id&quot;: 103,&#xd;
+    &quot;firstName&quot;: &quot;John&quot;,&#xd;
+    &quot;lastName&quot;: &quot;Doe&quot;,&#xd;
+    &quot;email&quot;: &quot;gafegoh332@bariswc.com&quot;,&#xd;
+    &quot;role&quot;: &quot;ROLE_CUSTOMER&quot;,&#xd;
+    &quot;isActive&quot;: false&#xd;
+  }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request delete">
+          <stringProp name="HTTPSampler.domain">car-rental-cymg8.ondigitalocean.app</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/cars/delete/15</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">DELETE</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;message&quot;: &quot;User not authenticated&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request update">
+          <stringProp name="HTTPSampler.domain">car-rental-cymg8.ondigitalocean.app</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/cars/update/15</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;carStatus&quot;: &quot;AVAILABLE&quot;,&#xd;
+  &quot;dayRentalPrice&quot;: 60&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request Login User">
+          <stringProp name="HTTPSampler.domain">car-rental-cymg8.ondigitalocean.app</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/auth/login</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;email&quot;: &quot;test43@gmail.com&quot;,&#xd;
+  &quot;password&quot;: &quot;Password1@&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request car brand for rent">
+          <stringProp name="HTTPSampler.domain">car-rental-cymg8.ondigitalocean.app</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/cars/brands</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+  &quot;Toyota&quot;,&#xd;
+  &quot;Honda&quot;,&#xd;
+  &quot;BMW&quot;,&#xd;
+  &quot;Tesla&quot;,&#xd;
+  &quot;Ford&quot;,&#xd;
+  &quot;Audi&quot;,&#xd;
+  &quot;Chevrolet&quot;,&#xd;
+  &quot;Nissan&quot;,&#xd;
+  &quot;Mazda&quot;,&#xd;
+  &quot;Mercedes-Benz&quot;,&#xd;
+  &quot;Kia&quot;,&#xd;
+  &quot;Hyundai&quot;,&#xd;
+  &quot;Porsche&quot;,&#xd;
+  &quot;Land Rover&quot;,&#xd;
+  &quot;Jeep&quot;&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

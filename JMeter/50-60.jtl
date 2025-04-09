@@ -1,0 +1,3541 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1744217005027,1563,HomePage Request,200,OK,Car_rent 1-50,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1551,0,1463
+1744217004281,2340,HomePage Request,200,OK,Car_rent 1-8,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2339,0,2227
+1744217006594,87,HTTP Request Login,401,Unauthorized,Car_rent 1-50,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,87,0,0
+1744217006684,36,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-50,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,36,0,0
+1744217004908,1814,HomePage Request,200,OK,Car_rent 1-38,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1809,0,1583
+1744217004388,2352,HomePage Request,200,OK,Car_rent 1-21,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2352,0,2103
+1744217006723,32,HTTP Request Cars,401,Unauthorized,Car_rent 1-50,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,32,0,0
+1744217006723,39,HTTP Request Login,401,Unauthorized,Car_rent 1-38,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,39,0,0
+1744217005025,1761,HomePage Request,200,OK,Car_rent 1-49,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1760,0,1728
+1744217006762,36,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-38,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,36,0,0
+1744217006755,46,HTTP Request bookings,401,Unauthorized,Car_rent 1-50,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,46,0,0
+1744217006800,40,HTTP Request Cars,401,Unauthorized,Car_rent 1-38,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,40,0,0
+1744217006786,56,HTTP Request Login,401,Unauthorized,Car_rent 1-49,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,56,0,0
+1744217005050,1794,HomePage Request,200,OK,Car_rent 1-52,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1786,0,1459
+1744217006803,64,HTTP Request all cars,200,OK,Car_rent 1-50,text,true,,5342,5961,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,62,0,0
+1744217006868,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-50,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,60,60,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217006743,127,HTTP Request Login,401,Unauthorized,Car_rent 1-21,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,127,0,0
+1744217006842,31,HTTP Request bookings,401,Unauthorized,Car_rent 1-38,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,31,0,0
+1744217006843,35,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-49,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,35,0,0
+1744217004581,2314,HomePage Request,200,OK,Car_rent 1-31,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2313,0,1925
+1744217004281,2622,HomePage Request,200,OK,Car_rent 1-5,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2622,0,2241
+1744217004895,2013,HomePage Request,200,OK,Car_rent 1-44,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2012,0,1625
+1744217004354,2561,HomePage Request,200,OK,Car_rent 1-19,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2560,0,2159
+1744217005101,1820,HomePage Request,200,OK,Car_rent 1-59,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1820,0,1411
+1744217004281,2646,HomePage Request,200,OK,Car_rent 1-13,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2645,0,2240
+1744217004323,2603,HomePage Request,200,OK,Car_rent 1-17,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2603,0,2191
+1744217004898,2035,HomePage Request,200,OK,Car_rent 1-43,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2033,0,1605
+1744217005015,1920,HomePage Request,200,OK,Car_rent 1-47,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1920,0,1476
+1744217006879,62,HTTP Request Cars,401,Unauthorized,Car_rent 1-49,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,62,0,0
+1744217004280,2663,HomePage Request,200,OK,Car_rent 1-4,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2662,0,2214
+1744217004575,2370,HomePage Request,200,OK,Car_rent 1-27,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2369,0,1916
+1744217006872,74,HTTP Request delete,401,Unauthorized,Car_rent 1-50,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,74,0,0
+1744217006904,46,HTTP Request Login,401,Unauthorized,Car_rent 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,46,0,0
+1744217006846,106,HTTP Request Login,401,Unauthorized,Car_rent 1-52,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,106,0,0
+1744217006895,58,HTTP Request Login,401,Unauthorized,Car_rent 1-31,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,58,0,0
+1744217006871,86,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-21,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,86,0,0
+1744217006908,50,HTTP Request Login,401,Unauthorized,Car_rent 1-44,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,50,0,0
+1744217006623,339,HTTP Request Login,401,Unauthorized,Car_rent 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,339,0,0
+1744217006922,42,HTTP Request Login,401,Unauthorized,Car_rent 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,42,0,0
+1744217006922,47,HTTP Request Login,401,Unauthorized,Car_rent 1-59,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,47,0,0
+1744217004598,2377,HomePage Request,200,OK,Car_rent 1-33,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2376,0,1893
+1744217004444,2533,HomePage Request,200,OK,Car_rent 1-23,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2533,0,2075
+1744217004899,2079,HomePage Request,200,OK,Car_rent 1-42,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2079,0,1620
+1744217005042,1942,HomePage Request,200,OK,Car_rent 1-51,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1942,0,1449
+1744217004281,2703,HomePage Request,200,OK,Car_rent 1-2,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2703,0,2237
+1744217004904,2082,HomePage Request,200,OK,Car_rent 1-40,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2082,0,1614
+1744217004407,2581,HomePage Request,200,OK,Car_rent 1-22,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2581,0,2082
+1744217004906,2082,HomePage Request,200,OK,Car_rent 1-39,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2082,0,1585
+1744217004908,2082,HomePage Request,200,OK,Car_rent 1-37,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2082,0,1613
+1744217004789,2201,HomePage Request,200,OK,Car_rent 1-35,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2201,0,1720
+1744217005167,1824,HomePage Request,200,OK,Car_rent 1-60,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1824,0,1326
+1744217004292,2701,HomePage Request,200,OK,Car_rent 1-15,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2701,0,2199
+1744217005022,1971,HomePage Request,200,OK,Car_rent 1-48,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1970,0,1469
+1744217004280,2716,HomePage Request,200,OK,Car_rent 1-9,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2715,0,2212
+1744217004337,2661,HomePage Request,200,OK,Car_rent 1-18,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2660,0,2183
+1744217005077,1923,HomePage Request,200,OK,Car_rent 1-54,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1922,0,1418
+1744217005081,1919,HomePage Request,200,OK,Car_rent 1-57,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1919,0,1411
+1744217004464,2538,HomePage Request,200,OK,Car_rent 1-24,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2538,0,2027
+1744217004280,2723,HomePage Request,200,OK,Car_rent 1-11,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2723,0,2230
+1744217004307,2698,HomePage Request,200,OK,Car_rent 1-16,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2698,0,2184
+1744217004523,2482,HomePage Request,200,OK,Car_rent 1-25,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2481,0,1973
+1744217004941,2066,HomePage Request,200,OK,Car_rent 1-46,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2066,0,1550
+1744217004902,2107,HomePage Request,200,OK,Car_rent 1-41,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2107,0,1612
+1744217004584,2425,HomePage Request,200,OK,Car_rent 1-29,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2425,0,1918
+1744217004281,2729,HomePage Request,200,OK,Car_rent 1-10,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2729,0,2211
+1744217004280,2731,HomePage Request,200,OK,Car_rent 1-12,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2731,0,2212
+1744217004281,2731,HomePage Request,200,OK,Car_rent 1-7,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2731,0,2224
+1744217004581,2431,HomePage Request,200,OK,Car_rent 1-30,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2431,0,1936
+1744217004280,2734,HomePage Request,200,OK,Car_rent 1-3,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2734,0,2226
+1744217005113,1905,HomePage Request,200,OK,Car_rent 1-58,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1904,0,1398
+1744217004607,2412,HomePage Request,200,OK,Car_rent 1-34,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2412,0,1885
+1744217005083,1939,HomePage Request,200,OK,Car_rent 1-55,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1938,0,1409
+1744217004281,2747,HomePage Request,200,OK,Car_rent 1-1,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2747,0,2223
+1744217004578,2453,HomePage Request,200,OK,Car_rent 1-28,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2453,0,1920
+1744217005078,1955,HomePage Request,200,OK,Car_rent 1-56,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,1955,0,1412
+1744217004280,2751,HomePage Request,200,OK,Car_rent 1-14,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2750,0,2227
+1744217004921,2114,HomePage Request,200,OK,Car_rent 1-45,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2114,0,1599
+1744217004586,2450,HomePage Request,200,OK,Car_rent 1-32,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2449,0,1934
+1744217004371,2666,HomePage Request,200,OK,Car_rent 1-20,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2665,0,2129
+1744217006930,108,HTTP Request Login,401,Unauthorized,Car_rent 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,108,0,0
+1744217004280,2759,HomePage Request,200,OK,Car_rent 1-6,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2759,0,2212
+1744217004522,2518,HomePage Request,200,OK,Car_rent 1-26,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2518,0,1971
+1744217006962,78,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,78,0,0
+1744217006936,106,HTTP Request Login,401,Unauthorized,Car_rent 1-47,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,106,0,0
+1744217006959,84,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-44,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,84,0,0
+1744217006950,93,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,93,0,0
+1744217006941,103,HTTP Request bookings,401,Unauthorized,Car_rent 1-49,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,103,0,0
+1744217006966,79,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,79,0,0
+1744217006953,93,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-31,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,92,0,0
+1744217006933,112,HTTP Request Login,401,Unauthorized,Car_rent 1-43,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,112,0,0
+1744217006927,120,HTTP Request Login,401,Unauthorized,Car_rent 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,120,0,0
+1744217006875,172,HTTP Request all cars,200,OK,Car_rent 1-38,text,true,,5342,5961,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,172,0,0
+1744217007048,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-38,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,60,60,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217006947,104,HTTP Request update,401,Unauthorized,Car_rent 1-50,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,104,0,0
+1744217006953,98,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-52,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,97,0,0
+1744217006990,61,HTTP Request Login,401,Unauthorized,Car_rent 1-37,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,61,0,0
+1744217006957,95,HTTP Request Cars,401,Unauthorized,Car_rent 1-21,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,95,0,0
+1744217006969,84,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-59,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,84,0,0
+1744217006943,111,HTTP Request Login,401,Unauthorized,Car_rent 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,111,0,0
+1744217006999,55,HTTP Request Login,401,Unauthorized,Car_rent 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,55,0,0
+1744217006975,79,HTTP Request Login,401,Unauthorized,Car_rent 1-33,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,79,0,0
+1744217007000,58,HTTP Request Login,401,Unauthorized,Car_rent 1-54,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,58,0,0
+1744217006983,75,HTTP Request Login,401,Unauthorized,Car_rent 1-42,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,75,0,0
+1744217006994,67,HTTP Request Login,401,Unauthorized,Car_rent 1-48,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,67,0,0
+1744217004909,2158,HomePage Request,200,OK,Car_rent 1-36,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2157,0,1587
+1744217005047,2019,HomePage Request,200,OK,Car_rent 1-53,text,true,,1387,138,60,60,https://car-rental-cymg8.ondigitalocean.app/#,2019,0,1445
+1744217006945,195,HTTP Request Login,401,Unauthorized,Car_rent 1-27,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,195,0,0
+1744217007017,124,HTTP Request Login,401,Unauthorized,Car_rent 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,124,0,0
+1744217007009,133,HTTP Request Login,401,Unauthorized,Car_rent 1-29,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,133,0,0
+1744217006986,158,HTTP Request Login,401,Unauthorized,Car_rent 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,158,0,0
+1744217006987,159,HTTP Request Login,401,Unauthorized,Car_rent 1-51,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,159,0,0
+1744217007058,89,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-42,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,89,0,0
+1744217006992,156,HTTP Request Login,401,Unauthorized,Car_rent 1-60,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,156,0,0
+1744217006990,160,HTTP Request Login,401,Unauthorized,Car_rent 1-35,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,160,0,0
+1744217007044,108,HTTP Request Cars,401,Unauthorized,Car_rent 1-44,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,107,0,0
+1744217006989,163,HTTP Request Login,401,Unauthorized,Car_rent 1-39,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,163,0,0
+1744217007039,114,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,114,0,0
+1744217007047,108,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-43,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,107,0,0
+1744217007046,112,HTTP Request Cars,401,Unauthorized,Car_rent 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,112,0,0
+1744217007046,113,HTTP Request Cars,401,Unauthorized,Car_rent 1-31,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,113,0,0
+1744217006977,183,HTTP Request Login,401,Unauthorized,Car_rent 1-23,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,183,0,0
+1744217007057,105,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-33,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,105,0,0
+1744217007051,112,HTTP Request Cars,401,Unauthorized,Car_rent 1-52,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,112,0,0
+1744217006997,167,HTTP Request Login,401,Unauthorized,Car_rent 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,167,0,0
+1744217007053,112,HTTP Request Cars,401,Unauthorized,Car_rent 1-59,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,112,0,0
+1744217007054,113,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,113,0,0
+1744217007052,116,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-37,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,116,0,0
+1744217007047,122,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,122,0,0
+1744217006987,186,HTTP Request Login,401,Unauthorized,Car_rent 1-40,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,186,0,0
+1744217006989,184,HTTP Request Login,401,Unauthorized,Car_rent 1-22,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,184,0,0
+1744217006994,182,HTTP Request Login,401,Unauthorized,Car_rent 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,182,0,0
+1744217007044,113,HTTP Request Cars,401,Unauthorized,Car_rent 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,113,0,0
+1744217007007,171,HTTP Request Login,401,Unauthorized,Car_rent 1-25,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,171,0,0
+1744217007004,174,HTTP Request Login,401,Unauthorized,Car_rent 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,174,0,0
+1744217007052,128,HTTP Request bookings,401,Unauthorized,Car_rent 1-21,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,128,0,0
+1744217007051,129,HTTP Request Login User,401,Unauthorized,Car_rent 1-50,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,129,0,0
+1744217007005,176,HTTP Request Login,401,Unauthorized,Car_rent 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,176,0,0
+1744217007068,169,HTTP Request Login,401,Unauthorized,Car_rent 1-53,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,169,0,0
+1744217007058,180,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-54,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,180,0,0
+1744217007002,237,HTTP Request Login,401,Unauthorized,Car_rent 1-24,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,236,0,0
+1744217007153,87,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-39,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,87,0,0
+1744217007012,229,HTTP Request Login,401,Unauthorized,Car_rent 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,228,0,0
+1744217007011,231,HTTP Request Login,401,Unauthorized,Car_rent 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,231,0,0
+1744217007009,233,HTTP Request Login,401,Unauthorized,Car_rent 1-41,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,233,0,0
+1744217007144,99,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,99,0,0
+1744217007148,95,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-60,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,95,0,0
+1744217007141,106,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-27,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,106,0,0
+1744217007154,94,HTTP Request Cars,401,Unauthorized,Car_rent 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,94,0,0
+1744217007163,86,HTTP Request Cars,401,Unauthorized,Car_rent 1-33,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,86,0,0
+1744217007176,74,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,74,0,0
+1744217007164,87,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,87,0,0
+1744217007144,108,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-29,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,108,0,0
+1744217007001,251,HTTP Request Login,401,Unauthorized,Car_rent 1-57,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,251,0,0
+1744217007155,97,HTTP Request Cars,401,Unauthorized,Car_rent 1-43,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,97,0,0
+1744217007167,86,HTTP Request Cars,401,Unauthorized,Car_rent 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,86,0,0
+1744217007141,113,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,113,0,0
+1744217007160,95,HTTP Request bookings,401,Unauthorized,Car_rent 1-31,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,95,0,0
+1744217007174,81,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-40,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,81,0,0
+1744217007170,86,HTTP Request Cars,401,Unauthorized,Car_rent 1-37,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,86,0,0
+1744217007182,75,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,75,0,0
+1744217007067,193,HTTP Request Login,401,Unauthorized,Car_rent 1-36,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,193,0,0
+1744217007152,111,HTTP Request bookings,401,Unauthorized,Car_rent 1-44,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,111,0,0
+1744217007018,249,HTTP Request Login,401,Unauthorized,Car_rent 1-58,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,249,0,0
+1744217007036,231,HTTP Request Login,401,Unauthorized,Car_rent 1-45,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,231,0,0
+1744217007146,122,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-51,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,122,0,0
+1744217007010,260,HTTP Request Login,401,Unauthorized,Car_rent 1-46,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,260,0,0
+1744217007150,106,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-35,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,106,0,0
+1744217007013,326,HTTP Request Login,401,Unauthorized,Car_rent 1-30,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,326,0,0
+1744217007011,328,HTTP Request Login,401,Unauthorized,Car_rent 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,328,0,0
+1744217007041,299,HTTP Request Cars,401,Unauthorized,Car_rent 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,299,0,0
+1744217007161,181,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-23,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,180,0,0
+1744217007178,165,HTTP Request bookings,401,Unauthorized,Car_rent 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,165,0,0
+1744217007034,310,HTTP Request Login,401,Unauthorized,Car_rent 1-56,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,310,0,0
+1744217007042,303,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-47,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,303,0,0
+1744217007049,297,HTTP Request delete,401,Unauthorized,Car_rent 1-38,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,297,0,0
+1744217007020,326,HTTP Request Login,401,Unauthorized,Car_rent 1-34,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,326,0,0
+1744217007044,303,HTTP Request all cars,200,OK,Car_rent 1-49,text,true,,5342,5961,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,303,0,0
+1744217007348,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-49,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,60,60,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007163,188,HTTP Request bookings,401,Unauthorized,Car_rent 1-52,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,187,0,0
+1744217007252,99,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-57,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,99,0,0
+1744217007251,99,HTTP Request Cars,401,Unauthorized,Car_rent 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,99,0,0
+1744217007158,195,HTTP Request bookings,401,Unauthorized,Car_rent 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,195,0,0
+1744217007240,113,HTTP Request Cars,401,Unauthorized,Car_rent 1-39,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,113,0,0
+1744217007258,96,HTTP Request Cars,401,Unauthorized,Car_rent 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,96,0,0
+1744217007268,91,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-45,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,89,0,0
+1744217007269,93,HTTP Request Cars,401,Unauthorized,Car_rent 1-51,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,93,0,0
+1744217007239,124,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-24,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,124,0,0
+1744217007238,126,HTTP Request Cars,401,Unauthorized,Car_rent 1-54,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,126,0,0
+1744217007254,112,HTTP Request Cars,401,Unauthorized,Car_rent 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,112,0,0
+1744217007249,118,HTTP Request bookings,401,Unauthorized,Car_rent 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,118,0,0
+1744217007253,114,HTTP Request bookings,401,Unauthorized,Car_rent 1-43,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,114,0,0
+1744217007247,121,HTTP Request Cars,401,Unauthorized,Car_rent 1-27,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,110,0,0
+1744217007250,107,HTTP Request bookings,401,Unauthorized,Car_rent 1-33,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,107,0,0
+1744217007255,118,HTTP Request Cars,401,Unauthorized,Car_rent 1-40,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,118,0,0
+1744217007268,87,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-58,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,87,0,0
+1744217007251,106,HTTP Request Cars,401,Unauthorized,Car_rent 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,106,0,0
+1744217007166,210,HTTP Request bookings,401,Unauthorized,Car_rent 1-59,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,60,60,https://car-rental-cymg8.ondigitalocean.app/api/bookings,210,0,0
+1744217007038,318,HTTP Request Login,401,Unauthorized,Car_rent 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,318,0,0
+1744217007244,112,HTTP Request Cars,401,Unauthorized,Car_rent 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,112,0,0
+1744217007247,109,HTTP Request Cars,401,Unauthorized,Car_rent 1-60,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,109,0,0
+1744217007242,114,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,114,0,0
+1744217007031,325,HTTP Request Login,401,Unauthorized,Car_rent 1-28,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,325,0,0
+1744217007242,114,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-41,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,114,0,0
+1744217007036,320,HTTP Request Login,401,Unauthorized,Car_rent 1-32,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,60,60,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,320,0,0
+1744217007181,200,HTTP Request car brand for rent,200,OK,Car_rent 1-50,text,true,,1048,414,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,200,0,0
+1744217007241,115,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,114,0,0
+1744217007252,103,HTTP Request Cars,401,Unauthorized,Car_rent 1-29,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,60,60,https://car-rental-cymg8.ondigitalocean.app/api/cars,103,0,0
+1744217007238,117,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-53,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,60,60,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,117,0,0
+1744217007035,403,HTTP Request Login,401,Unauthorized,Car_rent 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,59,59,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,403,0,0
+1744217007254,184,HTTP Request bookings,401,Unauthorized,Car_rent 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,184,0,0
+1744217007054,387,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,387,0,0
+1744217007342,99,HTTP Request Cars,401,Unauthorized,Car_rent 1-23,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,99,0,0
+1744217007260,182,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-36,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,182,0,0
+1744217007349,95,HTTP Request delete,401,Unauthorized,Car_rent 1-49,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,95,0,0
+1744217007341,104,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,104,0,0
+1744217007175,266,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-22,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,266,0,0
+1744217007344,103,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-56,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,103,0,0
+1744217007022,428,HTTP Request Login,401,Unauthorized,Car_rent 1-55,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,59,59,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,428,0,0
+1744217007346,104,HTTP Request Cars,401,Unauthorized,Car_rent 1-47,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,104,0,0
+1744217007340,112,HTTP Request bookings,401,Unauthorized,Car_rent 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,112,0,0
+1744217007352,103,HTTP Request bookings,401,Unauthorized,Car_rent 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,102,0,0
+1744217007347,109,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-34,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,109,0,0
+1744217007351,106,HTTP Request Cars,401,Unauthorized,Car_rent 1-57,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,106,0,0
+1744217007373,86,HTTP Request bookings,401,Unauthorized,Car_rent 1-40,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,86,0,0
+1744217007029,432,HTTP Request Login,401,Unauthorized,Car_rent 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,59,59,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,432,0,0
+1744217007040,422,HTTP Request Login,401,Unauthorized,Car_rent 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,59,59,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,422,0,0
+1744217007369,95,HTTP Request bookings,401,Unauthorized,Car_rent 1-27,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,95,0,0
+1744217007378,88,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,88,0,0
+1744217007375,92,HTTP Request Cars,401,Unauthorized,Car_rent 1-58,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,92,0,0
+1744217007363,105,HTTP Request bookings,401,Unauthorized,Car_rent 1-51,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,105,0,0
+1744217007354,115,HTTP Request bookings,401,Unauthorized,Car_rent 1-39,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,115,0,0
+1744217007365,104,HTTP Request bookings,401,Unauthorized,Car_rent 1-54,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,104,0,0
+1744217007357,112,HTTP Request bookings,401,Unauthorized,Car_rent 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,112,0,0
+1744217007379,91,HTTP Request Cars,401,Unauthorized,Car_rent 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,91,0,0
+1744217007381,89,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-32,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,89,0,0
+1744217007383,88,HTTP Request bookings,401,Unauthorized,Car_rent 1-29,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,88,0,0
+1744217007368,102,HTTP Request bookings,401,Unauthorized,Car_rent 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,102,0,0
+1744217007359,113,HTTP Request Cars,401,Unauthorized,Car_rent 1-45,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,113,0,0
+1744217007363,114,HTTP Request Cars,401,Unauthorized,Car_rent 1-24,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,114,0,0
+1744217007340,203,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-30,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,203,0,0
+1744217007456,87,HTTP Request Cars,401,Unauthorized,Car_rent 1-34,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,87,0,0
+1744217007463,81,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,81,0,0
+1744217007444,102,HTTP Request update,401,Unauthorized,Car_rent 1-49,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,102,0,0
+1744217007468,78,HTTP Request bookings,401,Unauthorized,Car_rent 1-58,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,78,0,0
+1744217007442,103,HTTP Request Cars,401,Unauthorized,Car_rent 1-36,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,103,0,0
+1744217007439,112,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,112,0,0
+1744217007446,106,HTTP Request Cars,401,Unauthorized,Car_rent 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,106,0,0
+1744217007347,205,HTTP Request update,401,Unauthorized,Car_rent 1-38,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,205,0,0
+1744217007448,105,HTTP Request Cars,401,Unauthorized,Car_rent 1-56,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,105,0,0
+1744217007446,108,HTTP Request Cars,401,Unauthorized,Car_rent 1-22,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,108,0,0
+1744217007375,180,HTTP Request bookings,401,Unauthorized,Car_rent 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,180,0,0
+1744217007461,92,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,92,0,0
+1744217007458,99,HTTP Request bookings,401,Unauthorized,Car_rent 1-57,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,99,0,0
+1744217007379,180,HTTP Request bookings,401,Unauthorized,Car_rent 1-60,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,180,0,0
+1744217007450,111,HTTP Request bookings,401,Unauthorized,Car_rent 1-47,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,111,0,0
+1744217007441,122,HTTP Request Cars,401,Unauthorized,Car_rent 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,122,0,0
+1744217007471,171,HTTP Request Cars,401,Unauthorized,Car_rent 1-32,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,171,0,0
+1744217007441,201,HTTP Request bookings,401,Unauthorized,Car_rent 1-23,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,201,0,0
+1744217007551,93,HTTP Request Cars,401,Unauthorized,Car_rent 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,93,0,0
+1744217007471,173,HTTP Request bookings,401,Unauthorized,Car_rent 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,173,0,0
+1744217007264,381,HTTP Request all cars,200,OK,Car_rent 1-44,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,380,0,0
+1744217007453,193,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-55,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,193,0,0
+1744217007550,98,HTTP Request bookings,401,Unauthorized,Car_rent 1-36,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,97,0,0
+1744217007647,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-44,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007554,96,HTTP Request bookings,401,Unauthorized,Car_rent 1-22,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,96,0,0
+1744217007554,98,HTTP Request bookings,401,Unauthorized,Car_rent 1-56,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,98,0,0
+1744217007543,111,HTTP Request Cars,401,Unauthorized,Car_rent 1-30,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,111,0,0
+1744217007180,477,HTTP Request all cars,200,OK,Car_rent 1-21,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,475,0,0
+1744217007544,114,HTTP Request Cars,401,Unauthorized,Car_rent 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,114,0,0
+1744217007658,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-21,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007552,107,HTTP Request bookings,401,Unauthorized,Car_rent 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,107,0,0
+1744217007544,116,HTTP Request bookings,401,Unauthorized,Car_rent 1-34,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,116,0,0
+1744217007546,116,HTTP Request Login User,401,Unauthorized,Car_rent 1-49,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,59,59,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,116,0,0
+1744217007386,277,HTTP Request Cars,401,Unauthorized,Car_rent 1-53,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,277,0,0
+1744217007556,110,HTTP Request Cars,401,Unauthorized,Car_rent 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,110,0,0
+1744217007553,185,HTTP Request Login User,401,Unauthorized,Car_rent 1-38,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,59,59,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,185,0,0
+1744217007370,370,HTTP Request all cars,200,OK,Car_rent 1-33,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,370,0,0
+1744217007255,485,HTTP Request all cars,200,OK,Car_rent 1-31,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,485,0,0
+1744217007377,363,HTTP Request bookings,401,Unauthorized,Car_rent 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,363,0,0
+1744217007741,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-33,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007383,359,HTTP Request Cars,401,Unauthorized,Car_rent 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,359,0,0
+1744217007565,177,HTTP Request bookings,401,Unauthorized,Car_rent 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,177,0,0
+1744217007257,486,HTTP Request bookings,401,Unauthorized,Car_rent 1-37,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,486,0,0
+1744217007741,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-31,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007650,97,HTTP Request delete,401,Unauthorized,Car_rent 1-44,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,97,0,0
+1744217007666,81,HTTP Request bookings,401,Unauthorized,Car_rent 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,81,0,0
+1744217007655,92,HTTP Request bookings,401,Unauthorized,Car_rent 1-30,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,92,0,0
+1744217007351,399,HTTP Request all cars,200,OK,Car_rent 1-52,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,399,0,0
+1744217007660,90,HTTP Request bookings,401,Unauthorized,Car_rent 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,90,0,0
+1744217007381,371,HTTP Request Cars,401,Unauthorized,Car_rent 1-41,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,371,0,0
+1744217007353,399,HTTP Request all cars,200,OK,Car_rent 1-19,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,399,0,0
+1744217007751,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-52,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007754,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007659,196,HTTP Request delete,401,Unauthorized,Car_rent 1-21,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,196,0,0
+1744217007646,210,HTTP Request Cars,401,Unauthorized,Car_rent 1-55,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,210,0,0
+1744217007469,389,HTTP Request all cars,200,OK,Car_rent 1-39,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,389,0,0
+1744217007859,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-39,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007642,218,HTTP Request bookings,401,Unauthorized,Car_rent 1-32,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,218,0,0
+1744217007380,479,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-28,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,479,0,0
+1744217007452,413,HTTP Request all cars,200,OK,Car_rent 1-8,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,411,0,0
+1744217007472,395,HTTP Request bookings,401,Unauthorized,Car_rent 1-45,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,394,0,0
+1744217007345,522,HTTP Request all cars,200,OK,Car_rent 1-5,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,522,0,0
+1744217007367,500,HTTP Request all cars,200,OK,Car_rent 1-17,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,500,0,0
+1744217007470,398,HTTP Request all cars,200,OK,Car_rent 1-16,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,398,0,0
+1744217007866,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007868,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007868,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007869,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007744,133,HTTP Request delete,401,Unauthorized,Car_rent 1-31,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,133,0,0
+1744217007466,413,HTTP Request Cars,401,Unauthorized,Car_rent 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,412,0,0
+1744217007644,250,HTTP Request bookings,401,Unauthorized,Car_rent 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,250,0,0
+1744217007469,437,HTTP Request all cars,200,OK,Car_rent 1-54,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,436,0,0
+1744217007907,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-54,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007460,478,HTTP Request all cars,200,OK,Car_rent 1-40,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,478,0,0
+1744217007663,275,HTTP Request bookings,401,Unauthorized,Car_rent 1-53,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,275,0,0
+1744217007939,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-40,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007752,190,HTTP Request bookings,401,Unauthorized,Car_rent 1-41,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,190,0,0
+1744217007742,201,HTTP Request delete,401,Unauthorized,Car_rent 1-33,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,201,0,0
+1744217007180,764,HTTP Request Cars,401,Unauthorized,Car_rent 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars,764,0,0
+1744217007478,468,HTTP Request bookings,401,Unauthorized,Car_rent 1-24,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,468,0,0
+1744217007747,202,HTTP Request update,401,Unauthorized,Car_rent 1-44,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,201,0,0
+1744217007179,771,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-25,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,770,0,0
+1744217007562,390,HTTP Request all cars,200,OK,Car_rent 1-47,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,390,0,0
+1744217007063,891,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-48,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,891,0,0
+1744217007179,778,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,59,59,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,778,0,0
+1744217007953,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-47,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007742,218,HTTP Request bookings,401,Unauthorized,Car_rent 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,59,59,https://car-rental-cymg8.ondigitalocean.app/api/bookings,218,0,0
+1744217007464,496,HTTP Request all cars,200,OK,Car_rent 1-27,text,true,,5342,5961,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,496,0,0
+1744217007756,204,HTTP Request delete,401,Unauthorized,Car_rent 1-52,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,204,0,0
+1744217007962,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-27,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,59,59,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007662,322,HTTP Request car brand for rent,200,OK,Car_rent 1-49,text,true,,1048,414,59,59,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,322,0,0
+1744217007860,179,HTTP Request delete,401,Unauthorized,Car_rent 1-39,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,179,0,0
+1744217007758,282,HTTP Request delete,401,Unauthorized,Car_rent 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,282,0,0
+1744217007177,863,HTTP Request Cars,401,Unauthorized,Car_rent 1-42,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars,863,0,0
+1744217007869,173,HTTP Request delete,401,Unauthorized,Car_rent 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,173,0,0
+1744217007873,169,HTTP Request delete,401,Unauthorized,Car_rent 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,169,0,0
+1744217007878,166,HTTP Request update,401,Unauthorized,Car_rent 1-31,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,166,0,0
+1744217007455,591,HTTP Request all cars,200,OK,Car_rent 1-9,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,590,0,0
+1744217008047,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007872,175,HTTP Request delete,401,Unauthorized,Car_rent 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,175,0,0
+1744217007439,611,HTTP Request all cars,200,OK,Car_rent 1-4,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,610,0,0
+1744217007869,181,HTTP Request delete,401,Unauthorized,Car_rent 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,181,0,0
+1744217008051,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007862,191,HTTP Request Cars,401,Unauthorized,Car_rent 1-28,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars,191,0,0
+1744217007855,200,HTTP Request update,401,Unauthorized,Car_rent 1-21,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,200,0,0
+1744217007272,786,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-46,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,58,58,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,786,0,0
+1744217007857,201,HTTP Request bookings,401,Unauthorized,Car_rent 1-55,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,58,58,https://car-rental-cymg8.ondigitalocean.app/api/bookings,201,0,0
+1744217007879,182,HTTP Request bookings,401,Unauthorized,Car_rent 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,58,58,https://car-rental-cymg8.ondigitalocean.app/api/bookings,182,0,0
+1744217007642,421,HTTP Request all cars,200,OK,Car_rent 1-23,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,421,0,0
+1744217008064,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-23,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007908,161,HTTP Request delete,401,Unauthorized,Car_rent 1-54,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,161,0,0
+1744217007560,510,HTTP Request all cars,200,OK,Car_rent 1-60,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,510,0,0
+1744217008071,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-60,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007661,411,HTTP Request all cars,200,OK,Car_rent 1-34,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,410,0,0
+1744217007367,706,HTTP Request all cars,200,OK,Car_rent 1-43,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,706,0,0
+1744217008073,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-34,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008074,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-43,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007949,191,HTTP Request Login User,401,Unauthorized,Car_rent 1-44,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,58,58,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,191,0,0
+1744217007961,180,HTTP Request update,401,Unauthorized,Car_rent 1-52,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,179,0,0
+1744217007945,197,HTTP Request bookings,401,Unauthorized,Car_rent 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,58,58,https://car-rental-cymg8.ondigitalocean.app/api/bookings,197,0,0
+1744217007955,188,HTTP Request Cars,401,Unauthorized,Car_rent 1-48,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars,188,0,0
+1744217007963,181,HTTP Request delete,401,Unauthorized,Car_rent 1-27,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,181,0,0
+1744217007752,393,HTTP Request all cars,200,OK,Car_rent 1-6,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,393,0,0
+1744217007943,202,HTTP Request update,401,Unauthorized,Car_rent 1-33,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,202,0,0
+1744217007960,186,HTTP Request delete,401,Unauthorized,Car_rent 1-47,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,186,0,0
+1744217007940,207,HTTP Request delete,401,Unauthorized,Car_rent 1-40,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,207,0,0
+1744217007272,875,HTTP Request Cars,401,Unauthorized,Car_rent 1-35,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars,875,0,0
+1744217007958,191,HTTP Request Cars,401,Unauthorized,Car_rent 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars,191,0,0
+1744217008150,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008041,110,HTTP Request update,401,Unauthorized,Car_rent 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,110,0,0
+1744217007950,203,HTTP Request Cars,401,Unauthorized,Car_rent 1-25,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars,203,0,0
+1744217008075,80,HTTP Request delete,401,Unauthorized,Car_rent 1-34,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,80,0,0
+1744217008069,87,HTTP Request update,401,Unauthorized,Car_rent 1-54,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,87,0,0
+1744217008048,110,HTTP Request update,401,Unauthorized,Car_rent 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,110,0,0
+1744217008040,119,HTTP Request update,401,Unauthorized,Car_rent 1-39,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,119,0,0
+1744217007556,605,HTTP Request all cars,200,OK,Car_rent 1-15,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,604,0,0
+1744217008162,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008050,187,HTTP Request update,401,Unauthorized,Car_rent 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,187,0,0
+1744217008065,173,HTTP Request delete,401,Unauthorized,Car_rent 1-23,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,173,0,0
+1744217008071,169,HTTP Request delete,401,Unauthorized,Car_rent 1-60,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,168,0,0
+1744217008041,199,HTTP Request bookings,401,Unauthorized,Car_rent 1-42,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,58,58,https://car-rental-cymg8.ondigitalocean.app/api/bookings,199,0,0
+1744217008045,195,HTTP Request Login User,401,Unauthorized,Car_rent 1-31,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,58,58,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,195,0,0
+1744217007547,696,HTTP Request all cars,200,OK,Car_rent 1-58,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,696,0,0
+1744217008244,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-58,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008052,192,HTTP Request delete,401,Unauthorized,Car_rent 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,192,0,0
+1744217008076,171,HTTP Request delete,401,Unauthorized,Car_rent 1-43,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,171,0,0
+1744217008074,174,HTTP Request Cars,401,Unauthorized,Car_rent 1-46,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars,174,0,0
+1744217007742,506,HTTP Request all cars,200,OK,Car_rent 1-18,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,505,0,0
+1744217008250,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007558,693,HTTP Request all cars,200,OK,Car_rent 1-57,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,692,0,0
+1744217008150,101,HTTP Request bookings,401,Unauthorized,Car_rent 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,58,58,https://car-rental-cymg8.ondigitalocean.app/api/bookings,101,0,0
+1744217008252,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-57,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008044,210,HTTP Request update,401,Unauthorized,Car_rent 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,210,0,0
+1744217007653,604,HTTP Request all cars,200,OK,Car_rent 1-56,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,601,0,0
+1744217008143,114,HTTP Request bookings,401,Unauthorized,Car_rent 1-48,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,58,58,https://car-rental-cymg8.ondigitalocean.app/api/bookings,114,0,0
+1744217008148,110,HTTP Request bookings,401,Unauthorized,Car_rent 1-35,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,58,58,https://car-rental-cymg8.ondigitalocean.app/api/bookings,110,0,0
+1744217008145,113,HTTP Request update,401,Unauthorized,Car_rent 1-27,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,113,0,0
+1744217008043,216,HTTP Request update,401,Unauthorized,Car_rent 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,216,0,0
+1744217008258,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-56,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007471,790,HTTP Request all cars,200,OK,Car_rent 1-29,text,true,,5342,5961,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,789,0,0
+1744217008262,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-29,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,58,58,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008147,115,HTTP Request update,401,Unauthorized,Car_rent 1-40,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,115,0,0
+1744217007739,546,HTTP Request car brand for rent,200,OK,Car_rent 1-38,text,true,,1048,414,58,58,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,546,0,0
+1744217008147,191,HTTP Request update,401,Unauthorized,Car_rent 1-47,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,191,0,0
+1744217008150,188,HTTP Request delete,401,Unauthorized,Car_rent 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,188,0,0
+1744217007741,598,HTTP Request all cars,200,OK,Car_rent 1-2,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,598,0,0
+1744217008145,194,HTTP Request Login User,401,Unauthorized,Car_rent 1-33,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,194,0,0
+1744217008159,181,HTTP Request Login User,401,Unauthorized,Car_rent 1-39,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,181,0,0
+1744217008047,293,HTTP Request delete,401,Unauthorized,Car_rent 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,293,0,0
+1744217008153,188,HTTP Request bookings,401,Unauthorized,Car_rent 1-25,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,57,57,https://car-rental-cymg8.ondigitalocean.app/api/bookings,188,0,0
+1744217008340,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008057,285,HTTP Request Login User,401,Unauthorized,Car_rent 1-21,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,285,0,0
+1744217008158,185,HTTP Request Login User,401,Unauthorized,Car_rent 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,185,0,0
+1744217008152,193,HTTP Request Login User,401,Unauthorized,Car_rent 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,193,0,0
+1744217008141,206,HTTP Request Login User,401,Unauthorized,Car_rent 1-52,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,206,0,0
+1744217007747,601,HTTP Request all cars,200,OK,Car_rent 1-1,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,600,0,0
+1744217008349,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008155,196,HTTP Request update,401,Unauthorized,Car_rent 1-34,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,196,0,0
+1744217008239,113,HTTP Request update,401,Unauthorized,Car_rent 1-23,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,113,0,0
+1744217008254,99,HTTP Request Login User,401,Unauthorized,Car_rent 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,99,0,0
+1744217008156,198,HTTP Request Login User,401,Unauthorized,Car_rent 1-54,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,198,0,0
+1744217008260,95,HTTP Request delete,401,Unauthorized,Car_rent 1-56,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,95,0,0
+1744217008259,98,HTTP Request Login User,401,Unauthorized,Car_rent 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,98,0,0
+1744217008253,105,HTTP Request delete,401,Unauthorized,Car_rent 1-57,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,105,0,0
+1744217008245,114,HTTP Request update,401,Unauthorized,Car_rent 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,114,0,0
+1744217008247,113,HTTP Request update,401,Unauthorized,Car_rent 1-43,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,113,0,0
+1744217008262,99,HTTP Request delete,401,Unauthorized,Car_rent 1-29,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,99,0,0
+1744217008054,308,HTTP Request bookings,401,Unauthorized,Car_rent 1-28,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,57,57,https://car-rental-cymg8.ondigitalocean.app/api/bookings,308,0,0
+1744217008240,122,HTTP Request update,401,Unauthorized,Car_rent 1-60,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,122,0,0
+1744217008250,188,HTTP Request delete,401,Unauthorized,Car_rent 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,188,0,0
+1744217008259,182,HTTP Request Login User,401,Unauthorized,Car_rent 1-27,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,182,0,0
+1744217008248,194,HTTP Request bookings,401,Unauthorized,Car_rent 1-46,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,57,57,https://car-rental-cymg8.ondigitalocean.app/api/bookings,194,0,0
+1744217008162,281,HTTP Request delete,401,Unauthorized,Car_rent 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,280,0,0
+1744217007650,792,HTTP Request all cars,200,OK,Car_rent 1-36,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,792,0,0
+1744217008444,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-36,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007064,1382,HTTP Request Login,401,Unauthorized,Car_rent 1-26,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,1382,0,0
+1744217008062,385,HTTP Request all cars,200,OK,Car_rent 1-20,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,384,0,0
+1744217007645,802,HTTP Request all cars,200,OK,Car_rent 1-12,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,802,0,0
+1744217008448,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008449,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008339,110,HTTP Request update,401,Unauthorized,Car_rent 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,110,0,0
+1744217008341,108,HTTP Request delete,401,Unauthorized,Car_rent 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,108,0,0
+1744217008356,94,HTTP Request update,401,Unauthorized,Car_rent 1-56,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,94,0,0
+1744217008362,88,HTTP Request Login User,401,Unauthorized,Car_rent 1-60,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,88,0,0
+1744217008350,102,HTTP Request delete,401,Unauthorized,Car_rent 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,102,0,0
+1744217008245,208,HTTP Request delete,401,Unauthorized,Car_rent 1-58,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,208,0,0
+1744217008340,113,HTTP Request update,401,Unauthorized,Car_rent 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,113,0,0
+1744217008351,106,HTTP Request Login User,401,Unauthorized,Car_rent 1-34,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,106,0,0
+1744217008358,102,HTTP Request update,401,Unauthorized,Car_rent 1-57,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,102,0,0
+1744217008262,198,HTTP Request Login User,401,Unauthorized,Car_rent 1-40,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,198,0,0
+1744217008237,223,HTTP Request Login User,401,Unauthorized,Car_rent 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,223,0,0
+1744217008361,128,HTTP Request update,401,Unauthorized,Car_rent 1-29,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,128,0,0
+1744217008352,184,HTTP Request Login User,401,Unauthorized,Car_rent 1-23,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,184,0,0
+1744217008360,177,HTTP Request Login User,401,Unauthorized,Car_rent 1-43,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,177,0,0
+1744217008360,177,HTTP Request Login User,401,Unauthorized,Car_rent 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,177,0,0
+1744217007861,679,HTTP Request all cars,200,OK,Car_rent 1-32,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,678,0,0
+1744217007743,797,HTTP Request all cars,200,OK,Car_rent 1-37,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,797,0,0
+1744217008541,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-32,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008541,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-37,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007660,884,HTTP Request all cars,200,OK,Car_rent 1-10,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,883,0,0
+1744217008545,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007748,797,HTTP Request all cars,200,OK,Car_rent 1-30,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,797,0,0
+1744217008546,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-30,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008438,110,HTTP Request update,401,Unauthorized,Car_rent 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,110,0,0
+1744217008443,107,HTTP Request update,401,Unauthorized,Car_rent 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,107,0,0
+1744217008446,104,HTTP Request Admin Authorization,401,Unauthorized,Car_rent 1-26,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,287,57,57,https://car-rental-cymg8.ondigitalocean.app/api/customers/find-me,104,0,0
+1744217008448,102,HTTP Request delete,401,Unauthorized,Car_rent 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,102,0,0
+1744217008450,101,HTTP Request update,401,Unauthorized,Car_rent 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,101,0,0
+1744217008452,100,HTTP Request update,401,Unauthorized,Car_rent 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,100,0,0
+1744217008449,104,HTTP Request delete,401,Unauthorized,Car_rent 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,104,0,0
+1744217008489,65,HTTP Request Login User,401,Unauthorized,Car_rent 1-29,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,65,0,0
+1744217008460,98,HTTP Request Login User,401,Unauthorized,Car_rent 1-57,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,98,0,0
+1744217007867,691,HTTP Request all cars,200,OK,Car_rent 1-45,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,691,0,0
+1744217008559,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-45,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007939,701,HTTP Request all cars,200,OK,Car_rent 1-53,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,701,0,0
+1744217008641,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-53,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007895,747,HTTP Request all cars,200,OK,Car_rent 1-14,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,747,0,0
+1744217008339,304,HTTP Request Login User,401,Unauthorized,Car_rent 1-47,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,304,0,0
+1744217008643,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008444,200,HTTP Request delete,401,Unauthorized,Car_rent 1-36,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,199,0,0
+1744217008449,196,HTTP Request Login User,401,Unauthorized,Car_rent 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,196,0,0
+1744217007960,685,HTTP Request all cars,200,OK,Car_rent 1-7,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,685,0,0
+1744217008450,196,HTTP Request Login User,401,Unauthorized,Car_rent 1-56,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,196,0,0
+1744217008646,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007946,702,HTTP Request all cars,200,OK,Car_rent 1-24,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,701,0,0
+1744217008546,102,HTTP Request delete,401,Unauthorized,Car_rent 1-30,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,102,0,0
+1744217008649,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-24,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217007943,707,HTTP Request all cars,200,OK,Car_rent 1-41,text,true,,5342,5961,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,707,0,0
+1744217008551,100,HTTP Request update,401,Unauthorized,Car_rent 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,100,0,0
+1744217008651,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-41,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,57,57,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008453,200,HTTP Request Login User,401,Unauthorized,Car_rent 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,57,57,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,200,0,0
+1744217008551,103,HTTP Request Cars,401,Unauthorized,Car_rent 1-26,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,424,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars,103,0,0
+1744217008554,101,HTTP Request update,401,Unauthorized,Car_rent 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,101,0,0
+1744217008140,531,HTTP Request car brand for rent,200,OK,Car_rent 1-44,text,true,,1048,414,57,57,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,531,0,0
+1744217008560,177,HTTP Request delete,401,Unauthorized,Car_rent 1-45,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,56,56,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,177,0,0
+1744217008552,186,HTTP Request Login User,401,Unauthorized,Car_rent 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,56,56,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,186,0,0
+1744217008453,287,HTTP Request update,401,Unauthorized,Car_rent 1-58,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,56,56,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,287,0,0
+1744217008548,193,HTTP Request Login User,401,Unauthorized,Car_rent 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,56,56,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,193,0,0
+1744217008541,200,HTTP Request delete,401,Unauthorized,Car_rent 1-37,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,56,56,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,200,0,0
+1744217008552,189,HTTP Request Login User,401,Unauthorized,Car_rent 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,56,56,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,189,0,0
+1744217008550,192,HTTP Request Login User,401,Unauthorized,Car_rent 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,56,56,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,192,0,0
+1744217008545,197,HTTP Request delete,401,Unauthorized,Car_rent 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,56,56,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,197,0,0
+1744217008641,104,HTTP Request delete,401,Unauthorized,Car_rent 1-53,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,56,56,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,104,0,0
+1744217008651,97,HTTP Request Login User,401,Unauthorized,Car_rent 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,56,56,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,97,0,0
+1744217008651,97,HTTP Request delete,401,Unauthorized,Car_rent 1-41,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,56,56,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,97,0,0
+1744217008643,106,HTTP Request delete,401,Unauthorized,Car_rent 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,56,56,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,106,0,0
+1744217008644,106,HTTP Request update,401,Unauthorized,Car_rent 1-36,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,56,56,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,106,0,0
+1744217008654,97,HTTP Request bookings,401,Unauthorized,Car_rent 1-26,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",911,5447,56,56,https://car-rental-cymg8.ondigitalocean.app/api/bookings,97,0,0
+1744217007472,1280,HTTP Request all cars,200,OK,Car_rent 1-3,text,true,,5342,5961,56,56,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,1280,0,0
+1744217008753,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,56,56,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008241,529,HTTP Request car brand for rent,200,OK,Car_rent 1-31,text,true,,1048,414,56,56,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,529,0,0
+1744217008441,335,HTTP Request car brand for rent,200,OK,Car_rent 1-27,text,true,,1048,414,55,55,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,335,0,0
+1744217008647,192,HTTP Request delete,401,Unauthorized,Car_rent 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,192,0,0
+1744217008058,781,HTTP Request all cars,200,OK,Car_rent 1-55,text,true,,5342,5961,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,780,0,0
+1744217008541,299,HTTP Request delete,401,Unauthorized,Car_rent 1-32,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,299,0,0
+1744217008649,190,HTTP Request update,401,Unauthorized,Car_rent 1-30,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,190,0,0
+1744217008649,193,HTTP Request delete,401,Unauthorized,Car_rent 1-24,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,193,0,0
+1744217008655,188,HTTP Request Login User,401,Unauthorized,Car_rent 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,54,54,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,187,0,0
+1744217008842,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-55,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,54,54,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008142,704,HTTP Request all cars,200,OK,Car_rent 1-13,text,true,,5342,5961,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,703,0,0
+1744217008748,99,HTTP Request update,401,Unauthorized,Car_rent 1-41,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,99,0,0
+1744217008848,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,54,54,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008745,107,HTTP Request update,401,Unauthorized,Car_rent 1-53,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,107,0,0
+1744217008741,113,HTTP Request update,401,Unauthorized,Car_rent 1-37,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,113,0,0
+1744217008741,115,HTTP Request Login User,401,Unauthorized,Car_rent 1-58,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,54,54,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,115,0,0
+1744217008754,103,HTTP Request delete,401,Unauthorized,Car_rent 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,103,0,0
+1744217008258,600,HTTP Request all cars,200,OK,Car_rent 1-35,text,true,,5342,5961,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,599,0,0
+1744217008750,111,HTTP Request Login User,401,Unauthorized,Car_rent 1-36,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,54,54,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,111,0,0
+1744217008442,420,HTTP Request all cars,200,OK,Car_rent 1-46,text,true,,5342,5961,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,419,0,0
+1744217008861,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-35,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,54,54,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008742,122,HTTP Request update,401,Unauthorized,Car_rent 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,122,0,0
+1744217008863,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-46,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,54,54,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008750,104,HTTP Request update,401,Unauthorized,Car_rent 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,104,0,0
+1744217008340,530,HTTP Request car brand for rent,200,OK,Car_rent 1-39,text,true,,1048,414,54,54,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,530,0,0
+1744217008457,418,HTTP Request car brand for rent,200,OK,Car_rent 1-34,text,true,,1048,414,53,53,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,418,0,0
+1744217008738,202,HTTP Request update,401,Unauthorized,Car_rent 1-45,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,202,0,0
+1744217008864,82,HTTP Request delete,401,Unauthorized,Car_rent 1-46,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,82,0,0
+1744217008864,83,HTTP Request Login User,401,Unauthorized,Car_rent 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,52,52,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,83,0,0
+1744217008241,707,HTTP Request all cars,200,OK,Car_rent 1-42,text,true,,5342,5961,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,706,0,0
+1744217008948,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-42,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,52,52,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008843,106,HTTP Request Login User,401,Unauthorized,Car_rent 1-30,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,52,52,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,106,0,0
+1744217008852,99,HTTP Request Login User,401,Unauthorized,Car_rent 1-53,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,52,52,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,99,0,0
+1744217008863,88,HTTP Request delete,401,Unauthorized,Car_rent 1-35,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,88,0,0
+1744217008843,109,HTTP Request update,401,Unauthorized,Car_rent 1-24,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,109,0,0
+1744217008840,112,HTTP Request update,401,Unauthorized,Car_rent 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,112,0,0
+1744217008849,104,HTTP Request delete,401,Unauthorized,Car_rent 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,104,0,0
+1744217008858,96,HTTP Request update,401,Unauthorized,Car_rent 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,96,0,0
+1744217008851,103,HTTP Request Login User,401,Unauthorized,Car_rent 1-41,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,52,52,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,103,0,0
+1744217008845,109,HTTP Request delete,401,Unauthorized,Car_rent 1-55,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,109,0,0
+1744217008841,122,HTTP Request update,401,Unauthorized,Car_rent 1-32,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,122,0,0
+1744217008558,413,HTTP Request car brand for rent,200,OK,Car_rent 1-57,text,true,,1048,414,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,413,0,0
+1744217008344,627,HTTP Request car brand for rent,200,OK,Car_rent 1-16,text,true,,1048,414,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,627,0,0
+1744217008646,325,HTTP Request car brand for rent,200,OK,Car_rent 1-56,text,true,,1048,414,52,52,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,325,0,0
+1744217008742,234,HTTP Request car brand for rent,200,OK,Car_rent 1-1,text,true,,1048,414,49,49,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,234,0,0
+1744217008349,633,HTTP Request car brand for rent,200,OK,Car_rent 1-52,text,true,,1048,414,48,48,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,633,0,0
+1744217008357,626,HTTP Request car brand for rent,200,OK,Car_rent 1-5,text,true,,1048,414,48,48,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,625,0,0
+1744217008353,630,HTTP Request car brand for rent,200,OK,Car_rent 1-17,text,true,,1048,414,48,48,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,630,0,0
+1744217008538,446,HTTP Request car brand for rent,200,OK,Car_rent 1-4,text,true,,1048,414,47,47,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,446,0,0
+1744217008864,176,HTTP Request Login User,401,Unauthorized,Car_rent 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,44,44,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,176,0,0
+1744217008949,91,HTTP Request delete,401,Unauthorized,Car_rent 1-42,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,44,44,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,91,0,0
+1744217008855,189,HTTP Request Login User,401,Unauthorized,Car_rent 1-37,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,44,44,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,189,0,0
+1744217008951,93,HTTP Request update,401,Unauthorized,Car_rent 1-35,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,44,44,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,93,0,0
+1744217008946,98,HTTP Request update,401,Unauthorized,Car_rent 1-46,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,44,44,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,98,0,0
+1744217008953,94,HTTP Request update,401,Unauthorized,Car_rent 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,44,44,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,94,0,0
+1744217008955,93,HTTP Request Login User,401,Unauthorized,Car_rent 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,44,44,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,93,0,0
+1744217008963,85,HTTP Request Login User,401,Unauthorized,Car_rent 1-32,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,44,44,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,85,0,0
+1744217008952,97,HTTP Request Login User,401,Unauthorized,Car_rent 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,44,44,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,97,0,0
+1744217008955,94,HTTP Request update,401,Unauthorized,Car_rent 1-55,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,44,44,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,94,0,0
+1744217008940,110,HTTP Request Login User,401,Unauthorized,Car_rent 1-45,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,44,44,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,110,0,0
+1744217008460,608,HTTP Request car brand for rent,200,OK,Car_rent 1-40,text,true,,1048,414,44,44,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,608,0,0
+1744217008843,232,HTTP Request car brand for rent,200,OK,Car_rent 1-12,text,true,,1048,414,43,43,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,232,0,0
+1744217008460,615,HTTP Request car brand for rent,200,OK,Car_rent 1-8,text,true,,1048,414,43,43,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,615,0,0
+1744217008554,526,HTTP Request car brand for rent,200,OK,Car_rent 1-29,text,true,,1048,414,41,41,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,526,0,0
+1744217008856,225,HTTP Request car brand for rent,200,OK,Car_rent 1-58,text,true,,1048,414,41,41,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,225,0,0
+1744217008538,545,HTTP Request car brand for rent,200,OK,Car_rent 1-43,text,true,,1048,414,40,40,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,545,0,0
+1744217008748,337,HTTP Request car brand for rent,200,OK,Car_rent 1-20,text,true,,1048,414,38,38,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,337,0,0
+1744217008952,193,HTTP Request Login User,401,Unauthorized,Car_rent 1-24,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,37,37,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,193,0,0
+1744217009040,107,HTTP Request update,401,Unauthorized,Car_rent 1-42,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,37,37,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,107,0,0
+1744217009044,104,HTTP Request Login User,401,Unauthorized,Car_rent 1-35,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,37,37,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,104,0,0
+1744217009049,104,HTTP Request Login User,401,Unauthorized,Car_rent 1-55,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,37,37,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,104,0,0
+1744217009047,106,HTTP Request Login User,401,Unauthorized,Car_rent 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,37,37,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,106,0,0
+1744217007651,1507,HTTP Request all cars,200,OK,Car_rent 1-22,text,true,,5342,5961,37,37,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,1506,0,0
+1744217007378,1780,HTTP Request all cars,200,OK,Car_rent 1-59,text,true,,5342,5961,37,37,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,1780,0,0
+1744217009044,115,HTTP Request Login User,401,Unauthorized,Car_rent 1-46,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,37,37,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,115,0,0
+1744217009160,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-22,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,37,37,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217009160,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-59,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,37,37,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008340,831,HTTP Request car brand for rent,200,OK,Car_rent 1-33,text,true,,1048,414,37,37,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,831,0,0
+1744217008951,231,HTTP Request car brand for rent,200,OK,Car_rent 1-53,text,true,,1048,414,36,36,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,231,0,0
+1744217008643,541,HTTP Request car brand for rent,200,OK,Car_rent 1-47,text,true,,1048,414,36,36,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,540,0,0
+1744217008346,838,HTTP Request car brand for rent,200,OK,Car_rent 1-19,text,true,,1048,414,36,36,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,838,0,0
+1744217008536,665,HTTP Request car brand for rent,200,OK,Car_rent 1-23,text,true,,1048,414,33,33,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,665,0,0
+1744217009161,79,HTTP Request delete,401,Unauthorized,Car_rent 1-22,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,32,32,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,79,0,0
+1744217009161,82,HTTP Request delete,401,Unauthorized,Car_rent 1-59,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,32,32,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,82,0,0
+1744217008362,888,HTTP Request all cars,200,OK,Car_rent 1-28,text,true,,5342,5961,32,32,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,887,0,0
+1744217009148,102,HTTP Request Login User,401,Unauthorized,Car_rent 1-42,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,32,32,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,102,0,0
+1744217009251,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-28,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,32,32,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008450,823,HTTP Request car brand for rent,200,OK,Car_rent 1-60,text,true,,1048,414,32,32,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,823,0,0
+1744217008950,324,HTTP Request car brand for rent,200,OK,Car_rent 1-30,text,true,,1048,414,31,31,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,324,0,0
+1744217008741,539,HTTP Request car brand for rent,200,OK,Car_rent 1-18,text,true,,1048,414,30,30,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,538,0,0
+1744217008738,543,HTTP Request car brand for rent,200,OK,Car_rent 1-2,text,true,,1048,414,30,30,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,542,0,0
+1744217008742,540,HTTP Request car brand for rent,200,OK,Car_rent 1-15,text,true,,1048,414,28,28,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,540,0,0
+1744217008646,640,HTTP Request car brand for rent,200,OK,Car_rent 1-6,text,true,,1048,414,27,27,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,640,0,0
+1744217009252,87,HTTP Request delete,401,Unauthorized,Car_rent 1-28,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,26,26,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,87,0,0
+1744217009243,96,HTTP Request update,401,Unauthorized,Car_rent 1-59,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,26,26,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,96,0,0
+1744217009241,100,HTTP Request update,401,Unauthorized,Car_rent 1-22,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,26,26,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,100,0,0
+1744217007468,1873,HTTP Request all cars,200,OK,Car_rent 1-51,text,true,,5342,5961,26,26,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,1873,0,0
+1744217009342,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-51,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,26,26,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008751,592,HTTP Request all cars,200,OK,Car_rent 1-26,text,true,,5342,5961,26,26,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,592,0,0
+1744217009343,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-26,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,26,26,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008258,1092,HTTP Request all cars,200,OK,Car_rent 1-48,text,true,,5342,5961,26,26,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,1092,0,0
+1744217008341,1009,HTTP Request all cars,200,OK,Car_rent 1-25,text,true,,5342,5961,26,26,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,1009,0,0
+1744217009351,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-48,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,26,26,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217009351,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-25,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,26,26,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217008653,711,HTTP Request car brand for rent,200,OK,Car_rent 1-9,text,true,,1048,414,26,26,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,711,0,0
+1744217008955,419,HTTP Request car brand for rent,200,OK,Car_rent 1-41,text,true,,1048,414,25,25,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,419,0,0
+1744217008342,1036,HTTP Request car brand for rent,200,OK,Car_rent 1-21,text,true,,1048,414,24,24,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,1036,0,0
+1744217008862,517,HTTP Request car brand for rent,200,OK,Car_rent 1-36,text,true,,1048,414,24,24,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,517,0,0
+1744217008354,1026,HTTP Request car brand for rent,200,OK,Car_rent 1-54,text,true,,1048,414,22,22,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,1026,0,0
+1744217009145,238,HTTP Request car brand for rent,200,OK,Car_rent 1-24,text,true,,1048,414,21,21,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,238,0,0
+1744217009342,103,HTTP Request delete,401,Unauthorized,Car_rent 1-51,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,20,20,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,103,0,0
+1744217009344,101,HTTP Request delete,401,Unauthorized,Car_rent 1-26,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,20,20,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,101,0,0
+1744217009340,108,HTTP Request update,401,Unauthorized,Car_rent 1-28,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,20,20,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,108,0,0
+1744217009352,96,HTTP Request delete,401,Unauthorized,Car_rent 1-48,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,20,20,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,96,0,0
+1744217009352,93,HTTP Request delete,401,Unauthorized,Car_rent 1-25,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,20,20,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,93,0,0
+1744217009341,111,HTTP Request Login User,401,Unauthorized,Car_rent 1-22,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,20,20,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,111,0,0
+1744217009340,114,HTTP Request Login User,401,Unauthorized,Car_rent 1-59,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,20,20,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,114,0,0
+1744217008251,1204,HTTP Request all cars,200,OK,Car_rent 1-11,text,true,,5342,5961,20,20,https://car-rental-cymg8.ondigitalocean.app/api/cars/all,1203,0,0
+1744217009456,0,HTTP Request customers,Non HTTP response code: java.net.URISyntaxException,Non HTTP response message: Illegal character in authority at index 8: https:// car-rental-cymg8.ondigitalocean.app/api/customers,Car_rent 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[Non HTTP response code: java.net.URISyntaxException]]]
+
+****** comparison: [[[200                                                ]]]
+
+/",1217,0,20,20,https:// car-rental-cymg8.ondigitalocean.app/api/customers,0,0,0
+1744217009040,433,HTTP Request car brand for rent,200,OK,Car_rent 1-10,text,true,,1048,414,20,20,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,432,0,0
+1744217009044,430,HTTP Request car brand for rent,200,OK,Car_rent 1-37,text,true,,1048,414,20,20,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,430,0,0
+1744217009050,429,HTTP Request car brand for rent,200,OK,Car_rent 1-45,text,true,,1048,414,18,18,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,429,0,0
+1744217009048,431,HTTP Request car brand for rent,200,OK,Car_rent 1-3,text,true,,1048,414,18,18,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,431,0,0
+1744217008948,531,HTTP Request car brand for rent,200,OK,Car_rent 1-14,text,true,,1048,414,18,18,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,531,0,0
+1744217009149,332,HTTP Request car brand for rent,200,OK,Car_rent 1-35,text,true,,1048,414,16,16,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,332,0,0
+1744217009048,435,HTTP Request car brand for rent,200,OK,Car_rent 1-32,text,true,,1048,414,14,14,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,435,0,0
+1744217009251,234,HTTP Request car brand for rent,200,OK,Car_rent 1-42,text,true,,1048,414,13,13,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,234,0,0
+1744217009154,331,HTTP Request car brand for rent,200,OK,Car_rent 1-55,text,true,,1048,414,13,13,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,331,0,0
+1744217009154,333,HTTP Request car brand for rent,200,OK,Car_rent 1-13,text,true,,1048,414,11,11,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,333,0,0
+1744217009049,442,HTTP Request car brand for rent,200,OK,Car_rent 1-7,text,true,,1048,414,10,10,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,442,0,0
+1744217009446,93,HTTP Request update,401,Unauthorized,Car_rent 1-51,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,9,9,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,93,0,0
+1744217009449,92,HTTP Request Login User,401,Unauthorized,Car_rent 1-28,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,9,9,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,92,0,0
+1744217009453,88,HTTP Request update,401,Unauthorized,Car_rent 1-25,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,9,9,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,88,0,0
+1744217009451,92,HTTP Request update,401,Unauthorized,Car_rent 1-48,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,9,9,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,92,0,0
+1744217009457,86,HTTP Request delete,401,Unauthorized,Car_rent 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,263,9,9,https://car-rental-cymg8.ondigitalocean.app/api/cars/delete/15,86,0,0
+1744217009160,416,HTTP Request car brand for rent,200,OK,Car_rent 1-46,text,true,,1048,414,9,9,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,416,0,0
+1744217009446,130,HTTP Request update,401,Unauthorized,Car_rent 1-26,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,9,9,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,130,0,0
+1744217009453,131,HTTP Request car brand for rent,200,OK,Car_rent 1-22,text,true,,1048,414,8,8,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,131,0,0
+1744217009454,131,HTTP Request car brand for rent,200,OK,Car_rent 1-59,text,true,,1048,414,7,7,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,131,0,0
+1744217009542,96,HTTP Request Login User,401,Unauthorized,Car_rent 1-25,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,6,6,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,96,0,0
+1744217009543,96,HTTP Request update,401,Unauthorized,Car_rent 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",914,274,6,6,https://car-rental-cymg8.ondigitalocean.app/api/cars/update/15,96,0,0
+1744217009540,99,HTTP Request Login User,401,Unauthorized,Car_rent 1-51,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,6,6,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,99,0,0
+1744217009543,98,HTTP Request Login User,401,Unauthorized,Car_rent 1-48,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,6,6,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,98,0,0
+1744217009576,67,HTTP Request Login User,401,Unauthorized,Car_rent 1-26,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,6,6,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,67,0,0
+1744217009639,347,HTTP Request Login User,401,Unauthorized,Car_rent 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[401]]]
+
+****** comparison: [[[200]]]
+
+/",996,278,6,6,https://car-rental-cymg8.ondigitalocean.app/api/auth/login,347,0,0
+1744217009542,466,HTTP Request car brand for rent,200,OK,Car_rent 1-28,text,true,,1048,414,6,6,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,466,0,0
+1744217009639,429,HTTP Request car brand for rent,200,OK,Car_rent 1-51,text,true,,1048,414,5,5,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,429,0,0
+1744217009638,432,HTTP Request car brand for rent,200,OK,Car_rent 1-25,text,true,,1048,414,5,5,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,432,0,0
+1744217009641,430,HTTP Request car brand for rent,200,OK,Car_rent 1-48,text,true,,1048,414,5,5,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,430,0,0
+1744217009643,436,HTTP Request car brand for rent,200,OK,Car_rent 1-26,text,true,,1048,414,3,3,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,436,0,0
+1744217009987,93,HTTP Request car brand for rent,200,OK,Car_rent 1-11,text,true,,1048,414,3,3,https://car-rental-cymg8.ondigitalocean.app/api/cars/brands,93,0,0
