@@ -6,6 +6,7 @@ import car_rent.pages.HomePage;
 import car_rent.pages.LoginPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,6 +19,7 @@ public class AdminLoginTests extends TestBase {
         new HomePage(app.driver, app.wait).clickLoginPage();
     }
 
+    @DisplayName("adminAuthorizationPositiveTest")
     @Test
     public void adminAuthorizationPositiveTest() {
         // Переходим на страницу логина
@@ -32,6 +34,7 @@ public class AdminLoginTests extends TestBase {
 
     }
 
+@DisplayName("adminAuthorizationEmptyEmailNegativeTest")
     @Test
     public void adminAuthorizationEmptyEmailNegativeTest() {
         // Переходим на страницу логина
@@ -45,7 +48,7 @@ public class AdminLoginTests extends TestBase {
         // Проверяем, что кнопка логина неактивна
         assertFalse(loginPage.isLoginButtonEnabled(), "Login button should be disabled when email is empty");
     }
-
+@DisplayName("adminAuthorizationEmptyPasswordNegativeTest")
     @Test
     public void adminAuthorizationEmptyPasswordNegativeTest() {
         // Переходим на страницу логина
@@ -60,6 +63,7 @@ public class AdminLoginTests extends TestBase {
         assertFalse(loginPage.isLoginButtonEnabled(), "Login button should be disabled when email is empty");
     }
 
+    @DisplayName("adminAuthorizationInvalidCredentialsNegativeTest")
     @Test
     public void adminAuthorizationInvalidCredentialsNegativeTest() {
         // Переходим на страницу логина

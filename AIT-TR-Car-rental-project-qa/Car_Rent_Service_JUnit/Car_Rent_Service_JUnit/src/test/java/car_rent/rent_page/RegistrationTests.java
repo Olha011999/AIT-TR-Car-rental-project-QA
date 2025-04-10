@@ -5,7 +5,9 @@ import car_rent.pages.HomePage;
 import car_rent.pages.RegistrationPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.FixedWidth;
 
 public class RegistrationTests extends TestBase {
 
@@ -15,6 +17,7 @@ public class RegistrationTests extends TestBase {
         new RegistrationPage(app.driver, app.wait).clickSignUp();
     }
 
+    @DisplayName("registrationPositiveTest")
     @Test
     public void registrationPositiveTest() {
         new RegistrationPage(app.driver, app.wait)
@@ -25,6 +28,7 @@ public class RegistrationTests extends TestBase {
                 .clickOkButton();
     }
 
+    @DisplayName("registrationNegativeAlreadyExistTest")
     @Test
     public void registrationNegativeAlreadyExistTest() {
         new RegistrationPage(app.driver, app.wait)
@@ -35,6 +39,7 @@ public class RegistrationTests extends TestBase {
                 .clickCancelButton();
     }
 
+    @DisplayName("registrationNegativeInvalidEmailTest")
     @Test
     public void registrationNegativeInvalidEmailTest() {
         new RegistrationPage(app.driver, app.wait)
@@ -44,6 +49,7 @@ public class RegistrationTests extends TestBase {
                 .checkLogIn();
     }
 
+    @DisplayName("registrationNegativeInvalidPasswordTest")
     @Test
     public void registrationNegativeInvalidPasswordTest() {
         new RegistrationPage(app.driver, app.wait)
@@ -53,6 +59,7 @@ public class RegistrationTests extends TestBase {
                 .checkLogIn();
     }
 
+    @DisplayName("registrationNegativeInvalidFirstNameTest")
     @Test
     public void registrationNegativeInvalidFirstNameTest() {
         new RegistrationPage(app.driver, app.wait)
@@ -62,6 +69,7 @@ public class RegistrationTests extends TestBase {
                 .checkLogIn();
     }
 
+    @DisplayName("registrationNegativeInvalidLastNameTest")
     @Test
     public void registrationNegativeInvalidLastNameTest() {
         new RegistrationPage(app.driver, app.wait)
@@ -71,6 +79,7 @@ public class RegistrationTests extends TestBase {
                 .checkLogIn();
     }
 
+    @DisplayName("registrationNegativeEmptyEmailTest")
     @Test
     public void registrationNegativeEmptyEmailTest() {
         new RegistrationPage(app.driver, app.wait)
@@ -80,6 +89,7 @@ public class RegistrationTests extends TestBase {
                 .checkLogIn();
     }
 
+    @DisplayName("registrationNegativeEmptyPasswordTest")
     @Test
     public void registrationNegativeEmptyPasswordTest() {
         new RegistrationPage(app.driver, app.wait)

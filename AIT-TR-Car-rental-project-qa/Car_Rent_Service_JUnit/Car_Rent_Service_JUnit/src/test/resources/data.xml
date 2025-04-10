@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="data" verbose="1">
+    <test name="all-tests">
+        <classes>
+            <class name="Car_Rent"/>
+            <class name="demoqa.book_store.LoginTests"/>
+            <class name="demoqa.book_store.RegisterTests"/>
+            <class name="demoqa.widgets.DatePickerTests"/>
+            <!-- Добавляешь сюда все нужные тест-классы -->
+        </classes>
+    </test>
+</suite>

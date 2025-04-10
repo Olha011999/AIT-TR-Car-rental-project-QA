@@ -6,6 +6,7 @@ import car_rent.pages.HomePage;
 import car_rent.pages.LoginPage;
 import car_rent.pages.admin_pages.AddCarPage;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -32,6 +33,7 @@ public class AddCarTests extends TestBase {
         new AdminPage(app.driver, app.wait).scrollDownSlowly();
     }
 
+    @DisplayName("allRequiredFieldsShouldBeVisiblePositiveTest")
     @Test
     public void allRequiredFieldsShouldBeVisiblePositiveTest() {
         logger.info("Starting test: allRequiredFieldsShouldBeVisible");
@@ -44,6 +46,7 @@ public class AddCarTests extends TestBase {
         logger.info("Test completed: allRequiredFieldsShouldBeVisible");
     }
 
+    @DisplayName("shouldShowSuccessAlertAfterAddingCarPositiveTest")
     @Test
     public void shouldShowSuccessAlertAfterAddingCarPositiveTest() {
         logger.info("Starting test: shouldShowSuccessAlertAfterAddingCar");
@@ -63,7 +66,7 @@ public class AddCarTests extends TestBase {
         logger.info("Test completed: shouldShowSuccessAlertAfterAddingCar");
     }
 
-
+@DisplayName("showErrorMessagesIfFieldsEmptyPositiveTest")
     @Test
     public void showErrorMessagesIfFieldsEmptyPositiveTest() {
         logger.info("Starting test: showErrorMessagesIfFieldsEmpty");
@@ -79,6 +82,7 @@ public class AddCarTests extends TestBase {
         logger.info("Test completed: showErrorMessagesIfFieldsEmpty");
     }
 
+    @DisplayName("shouldRejectInvalidImageFormatNegativeTest")
     @Test
     public void shouldRejectInvalidImageFormatNegativeTest() {
         logger.info("Starting test: shouldRejectInvalidImageFormat");
@@ -94,6 +98,7 @@ public class AddCarTests extends TestBase {
         logger.info("Test completed: shouldRejectInvalidImageFormat");
     }
 
+    @DisplayName("shouldRejectNonexistentImagePathNegativeTest")
     @Test
     public void shouldRejectNonexistentImagePathNegativeTest() {
         logger.info("Starting test: shouldRejectNonexistentImagePath");
@@ -109,6 +114,7 @@ public class AddCarTests extends TestBase {
         logger.info("Test completed: shouldRejectNonexistentImagePath");
     }
 
+    @DisplayName("shouldShowErrorForInvalidPriceNegativeTest")
     @Test
     public void shouldShowErrorForInvalidPriceNegativeTest() {
         logger.info("Starting test: shouldShowErrorForInvalidPrice");
@@ -130,6 +136,7 @@ public class AddCarTests extends TestBase {
         logger.info("Test completed: shouldShowErrorForInvalidPrice");
     }
 
+    @DisplayName("shouldRejectInvalidRentalPriceNegativeTest")
     @Test
     public void shouldRejectInvalidRentalPriceNegativeTest() {
         logger.info("Starting test: shouldRejectInvalidRentalPriceNegativeTest");
@@ -146,6 +153,8 @@ public class AddCarTests extends TestBase {
 
         logger.info("Test completed: shouldRejectNegativeRentalPriceNegativeTest");
     }
+
+    @DisplayName("shouldShowErrorsForEmptyFormNegativeTest")
     @Test
     public void shouldShowErrorsForEmptyFormNegativeTest() {
         logger.info("Starting test: shouldShowErrorsForEmptyFormNegativeTest");

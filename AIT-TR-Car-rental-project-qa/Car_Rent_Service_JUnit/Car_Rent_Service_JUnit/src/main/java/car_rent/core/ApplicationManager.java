@@ -6,8 +6,11 @@ import car_rent.pages.admin_pages.CarsPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,29 +28,41 @@ public class ApplicationManager {
 
     public void init() {
         String browser = System.getProperty("browser", "chrome");
+        boolean isHeadless = Boolean.parseBoolean(System.getProperty("headless", "true"));
 
         switch (browser.toLowerCase()) {
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                if (isHeadless) {
+                    firefoxOptions.addArguments("--headless");
+                }
+                driver = new FirefoxDriver(firefoxOptions);
                 break;
+
             case "edge":
                 WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
+                EdgeOptions edgeOptions = new EdgeOptions();
+                if (isHeadless) {
+                    edgeOptions.addArguments("--headless");
+                }
+                driver = new EdgeDriver(edgeOptions);
                 break;
-//            case "safari":
-//                WebDriverManager.edgedriver().setup();
-//                driver = new SafariDriver();
-//                break;
-            default: // Это резервный сценарий на случай, если значение browser не совпадает ни с одним из указанных случаев
+
+            default: // chrome
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                if (isHeadless) {
+                    chromeOptions.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080",
+                            "--no-sandbox", "--disable-dev-shm-usage");
+                }
+                driver = new ChromeDriver(chromeOptions);
         }
-        //driver = new ChromeDriver();
+
         driver.get("https://car-rental-cymg8.ondigitalocean.app/");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // неявное
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5)); // ожидание загрузки страницы
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
         wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 
         basePage = new BasePage(driver, wait);

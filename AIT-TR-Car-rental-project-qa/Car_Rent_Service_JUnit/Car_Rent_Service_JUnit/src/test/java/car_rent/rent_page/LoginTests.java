@@ -7,6 +7,7 @@ import car_rent.pages.LoginPage;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -20,7 +21,7 @@ public class LoginTests extends TestBase {
         new HomePage(app.driver, app.wait).clickLoginPage();
     }
 
-
+@DisplayName("authorizationPositiveTest")
     @Test
     public void authorizationPositiveTest() {
         // Переходим на страницу логина
@@ -34,6 +35,7 @@ public class LoginTests extends TestBase {
         shouldRunTearDown = false;
     }
 
+    @DisplayName("authorizationWithIncorrectLoginNegativeTest")
     @Test
     public void authorizationWithIncorrectLoginNegativeTest() {
         // Переходим на страницу логина
@@ -47,6 +49,7 @@ public class LoginTests extends TestBase {
         shouldRunTearDown = false;
     }
 
+    @DisplayName("authorizationWithIncorrectPasswordNegativeTest")
     @Test
     public void authorizationWithIncorrectPasswordNegativeTest() {
         // Переходим на страницу логина
@@ -60,6 +63,7 @@ public class LoginTests extends TestBase {
         shouldRunTearDown = false;
     }
 
+    @DisplayName("authorizationWithInvalidLoginNegativeTest")
     @Test
     public void authorizationWithInvalidLoginNegativeTest() {
         // Переходим на страницу логина
@@ -73,6 +77,7 @@ public class LoginTests extends TestBase {
         shouldRunTearDown = false;
     }
 
+    @DisplayName("authorizationWithInvalidPasswordNegativeTest")
     @Test
     public void authorizationWithInvalidPasswordNegativeTest() {
         // Переходим на страницу логина
@@ -86,6 +91,7 @@ public class LoginTests extends TestBase {
         shouldRunTearDown = false;
     }
 
+    @DisplayName("emailFieldIsNotFilledInNegativeTest")
     @Test
     public void emailFieldIsNotFilledInNegativeTest() {
         // Переходим на страницу логина
@@ -99,6 +105,7 @@ public class LoginTests extends TestBase {
         shouldRunTearDown = false;
     }
 
+    @DisplayName("passwordFieldIsNotFilledInNegativeTest")
     @Test
     public void passwordFieldIsNotFilledInNegativeTest() {
         // Переходим на страницу логина

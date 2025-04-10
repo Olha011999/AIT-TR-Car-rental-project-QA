@@ -16,10 +16,22 @@ dependencies {
     implementation 'org.slf4j:slf4j-nop:2.0.7'
     implementation 'com.google.firebase:firebase-firestore:25.1.3'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'// зависимость от SLF4J
+    runtimeOnly 'ch.qos.logback:logback-classic:1.4.11'
+    implementation 'com.google.firebase:firebase-firestore:24.9.1'
 
 
 }
 
 test {
     useJUnit()
+
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+    }
+
+    reports {
+        junitXml.required = true  // 🔧 чтобы .xml отчёты генерировались
+        html.required = true
+    }
 }
