@@ -1,0 +1,1657 @@
+{
+	"info": {
+		"_postman_id": "95f1f00b-31fe-4a42-8919-b502a8e592f7",
+		"name": "CarRentService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41673165",
+		"_collection_link": "https://galinaqa.postman.co/workspace/GalinaQA-Workspace~b8d62562-c9c0-479b-8c11-e05e8d1eeeb5/collection/41673165-95f1f00b-31fe-4a42-8919-b502a8e592f7?action=share&source=collection_link&creator=41673165"
+	},
+	"item": [
+		{
+			"name": "ADMIN",
+			"item": [
+				{
+					"name": "1. Add a car",
+					"item": [
+						{
+							"name": "Positive",
+							"item": [
+								{
+									"name": "Login Admin",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"admin_1@car-rent.de\",\n  \"password\": \"admin-Pass#007\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/auth/login",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add a car to the list",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{accessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\n  \"id\": 123,\n  \"brand\": \"VW\",\n  \"model\": \"Golf\",\n  \"year\": 2025,\n  \"type\": \"SEDAN\",\n  \"fuelType\": \"PETROL\",\n  \"transmissionType\": \"AUTOMATIC\",\n  \"carStatus\": \"RENTED\",\n  \"dayRentalPrice\": 150,\n  \"carImage\": \"https://shop-bucket.fra1.digitaloceanspaces.com/coconut-caf872c7-2ebd-4ec0-bd28-ff198091392c.png\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/api/cars/all",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"cars",
+												"all"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "4. Return a Car",
+					"item": [
+						{
+							"name": "Return a Car",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"✅ Car successfully returned\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(\"carStatus\", \"AVAILABLE\");\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": {{carId}},\r\n  \"carStatus\": \"AVAILABLE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/cars",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"cars"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Car is No Longer Listed as Rented After Return",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"✅ Car is no longer rented\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(\"carStatus\", \"AVAILABLE\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/cars",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"cars"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Damage Check is Not Mandatory for Returning a Car",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"✅ Damage check is not mandatory\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": {{carId}},\r\n  \"carStatus\": \"AVAILABLE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/cars",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"cars"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Admin Can Edit the Return Date",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"✅ Admin successfully edited the return date\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.have.property(\"rentalEndDate\", \"2025-04-01T10:00:00.000\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"rentalEndDate\": \"2025-04-01T10:00:00.000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/bookings/extend",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"bookings",
+										"extend"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "6. Delete Customer Profile",
+					"item": [
+						{
+							"name": "6.1 Positive",
+							"item": [
+								{
+									"name": "Delete Customer Account",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"User successfully deleted\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"console.log(\"Request send to:\", pm.request.url.toString());",
+													"console.log(\"Body request:\", pm.request.body);",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"Authorization\": \"Bearer {{authToken}}\",\n  \"Content-Type\": \"application/json\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/customers/delete/{{userId}}",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"customers",
+												"delete",
+												"{{userId}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "6.2 Negative",
+							"item": [
+								{
+									"name": "Delete a non-existent customer",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Deleting non-existent customer returns 404\", function () {",
+													"    pm.response.to.have.status(404); // Проверяем, что статус 404",
+													"    ",
+													"    let jsonData = pm.response.json(); // Парсим JSON",
+													"    pm.expect(jsonData).to.have.property(\"message\", \"Customer is not found\"); // Проверяем текст ошибки",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{accessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/customers/{{userId}}",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"customers",
+												"{{userId}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{accessToken}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "7. Get customers",
+					"item": [
+						{
+							"name": "7.1 Positive",
+							"item": [
+								{
+									"name": "Get all customers",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"pm.test(\"Customers list is retrieved successfully\", function () {",
+													"    pm.response.to.have.status(200); // Проверяем, что статус 200",
+													"",
+													"    let jsonData;",
+													"    try {",
+													"        jsonData = pm.response.json(); // Парсим JSON",
+													"    } catch (e) {",
+													"        pm.test(\"Ошибка парсинга JSON\", function () {",
+													"            pm.expect(false).to.be.true; // Принудительно провалим тест, если JSON не читается",
+													"        });",
+													"    }",
+													"",
+													"    pm.test(\"Response is an array\", function () {",
+													"        pm.expect(jsonData).to.be.an(\"array\"); // Проверяем, что пришёл массив",
+													"    });",
+													"",
+													"    if (jsonData.length > 0) {",
+													"        pm.test(\"First customer has required fields\", function () {",
+													"            pm.expect(jsonData[0]).to.have.property(\"id\");",
+													"            pm.expect(jsonData[0]).to.have.property(\"firstName\");",
+													"            pm.expect(jsonData[0]).to.have.property(\"lastName\");",
+													"            pm.expect(jsonData[0]).to.have.property(\"email\");",
+													"        });",
+													"    }",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{accessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/customers",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get customer per ID",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"User exists in response\", function () {",
+													"    let jsonData = pm.response.json();",
+													"    pm.expect(jsonData).to.have.property(\"id\");",
+													"",
+													"});",
+													"",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{accessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/customers/{{userId}}",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"customers",
+												"{{userId}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "1. Registration",
+					"item": [
+						{
+							"name": "1.1. Positive",
+							"item": [
+								{
+									"name": "Successful registration using the \"Log in\" button",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"pm.environment.set(\"timestamp\", Date.now());pm.environment.set(\"timestamp\", Date.now());",
+													"pm.environment.set(\"email\", \"john.doe+\" + pm.environment.get(\"timestamp\") + \"@example.com\");",
+													"pm.environment.set(\"password\", \"mypassword123\");"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Registration should be successful\", function () {",
+													"    pm.response.to.have.status(201);",
+													"    let response = pm.response.json();",
+													"    pm.expect(response).to.have.property(\"id\");",
+													"});",
+													"console.log(\"Request sent to:\", pm.request.url.toString());",
+													"console.log(\"Body request:\", pm.request.body);",
+													"",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"john.doe+{{timestamp}}@example.com\",\n  \"password\": \"mypassword123\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/auth/register",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "1.2 Negative",
+							"item": [
+								{
+									"name": "Registration with an already existing email address",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"pm.test(\"Registration with existing email should fail\", function () {",
+													"    pm.response.to.have.status(409);",
+													"    let response = pm.response.json();",
+													"    pm.expect(response.error).to.include(\"Customer already exists\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Response status code is 409\", function () {",
+													"  pm.response.to.have.status(409);",
+													"});",
+													"pm.test(\"Response body has a message property\", function () {",
+													"  pm.expect(pm.response.json()).to.have.property('message');",
+													"});",
+													"",
+													"console.log(\"Request send to:\", pm.request.url.toString());",
+													"    console.log(\"Body request:\", pm.request.body);  ",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Jane\",\n  \"lastName\": \"Smith\",\n  \"email\": \"{{email}}\", \n  \"password\": \"mypassword456\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/auth/register",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Registration with invalid email",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"pm.environment.set(\"email\", \"invalid-email\");  // Невалидный email",
+													"pm.environment.set(\"password\", \"mypassword123\");"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Registration with invalid email should fail\", function () {",
+													"    pm.response.to.have.status(400);  // Ожидаем ошибку 400 (Bad Request)",
+													"",
+													"    let response = pm.response.json();",
+													"",
+													"    // Проверяем, что в ответе есть ошибка валидации для email",
+													"    pm.expect(response.message).to.equal(\"Validation failed\");",
+													"    pm.expect(response.errors).to.have.property(\"email\");  // Ожидаем, что в ответе будет ошибка для email",
+													"    ",
+													"    // Проверяем, что сообщение ошибки соответствует ожидаемому",
+													"    pm.expect(response.errors.email.message).to.equal(\"Customer email must not be blank\");  // Ожидаем, что ошибка будет такой",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"invalid-email\",\n  \"password\": \"mypassword123\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/auth/register",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Registration w/ empty email field",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Registration with invalid email should fail\", function () {",
+													"    pm.response.to.have.status(400);",
+													"",
+													"    let response = pm.response.json();",
+													"",
+													"    pm.expect(response.message).to.equal(\"Validation failed\");",
+													"    pm.expect(response.errors).to.have.property(\"email\"); ",
+													"    ",
+													"    pm.expect(response.errors.email.message).to.equal(\"Customer email must not be blank\"); ",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"pm.environment.set(\"email\", \"\");  // Пустой email",
+													"pm.environment.set(\"password\", \"mypassword123\");"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"Jane\",\n  \"lastName\": \"Smith\",\n  \"email\": \"\", \n  \"password\": \"mypassword456\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/auth/register",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Registration with invalid password",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"pm.environment.set(\"timestamp\", Date.now());",
+													"pm.environment.set(\"email\", \"john.doe+\" + pm.environment.get(\"timestamp\") + \"@example.com\");",
+													"pm.environment.set(\"password\", \"123\"); //to short password"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Registration with invalid password should fail\", function () {",
+													"    pm.response.to.have.status(400); ",
+													"",
+													"    let response = pm.response.json();",
+													"",
+													"    pm.expect(response.message).to.equal(\"Validation failed\");",
+													"    pm.expect(response.errors).to.have.property(\"password\"); ",
+													"    ",
+													"    pm.expect(response.errors.password.message).to.equal(\"Password must be at least 6 characters long\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"{{email}}\",\n  \"password\": \"123\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/auth/register",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Empty firstname field",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"pm.environment.set(\"timestamp\", Date.now());",
+													"pm.environment.set(\"email\", \"john.doe+\" + pm.environment.get(\"timestamp\") + \"@example.com\");",
+													"pm.environment.set(\"password\", \"mypassword123\");"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Registration with empty first name should fail\", function () {",
+													"    pm.response.to.have.status(400);",
+													"",
+													"    let response = pm.response.json();",
+													"",
+													"    ",
+													"    pm.expect(response.message).to.equal(\"Validation failed\");",
+													"    pm.expect(response.errors).to.have.property(\"firstName\"); ",
+													"    ",
+													"    ",
+													"    pm.expect(response.errors.firstName.message).to.equal(\"Customer first name must not be blank\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"\", \n  \"lastName\": \"Doe\",\n  \"email\": \"{{email}}\", \n  \"password\": \"mypassword123\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/auth/register",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Empty lastname field",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"pm.environment.set(\"timestamp\", Date.now());",
+													"pm.environment.set(\"email\", \"john.doe+\" + pm.environment.get(\"timestamp\") + \"@example.com\");",
+													"pm.environment.set(\"password\", \"mypassword123\");"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Registration with empty last name should fail\", function () {",
+													"    pm.response.to.have.status(400);",
+													"",
+													"    let response = pm.response.json();",
+													"",
+													"    ",
+													"    pm.expect(response.message).to.equal(\"Validation failed\");",
+													"    pm.expect(response.errors).to.have.property(\"lastName\"); ",
+													"    ",
+													"    ",
+													"    pm.expect(response.errors.firstName.message).to.equal(\"Customer last name must not be blank\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"John\", \n  \"lastName\": \"\",\n  \"email\": \"{{email}}\", \n  \"password\": \"mypassword123\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/auth/register",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Empty password field",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"pm.environment.set(\"timestamp\", Date.now());",
+													"pm.environment.set(\"email\", \"john.doe+\" + pm.environment.get(\"timestamp\") + \"@example.com\");",
+													"pm.environment.set(\"password\", \"\");"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Registration with empty password should fail\", function () {",
+													"    pm.response.to.have.status(400);",
+													"",
+													"    let response = pm.response.json();",
+													"",
+													"    pm.expect(response.message).to.equal(\"Validation failed\");",
+													"    pm.expect(response.errors).to.have.property(\"password\");  ",
+													"    ",
+													"    ",
+													"    pm.expect(response.errors.password.message).to.equal(\"Customer password must not be blank\"); ",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"John\", \n  \"lastName\": \"Dow\",\n  \"email\": \"{{email}}\", \n  \"password\": \"\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/auth/register",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "2. Authorization",
+					"item": [
+						{
+							"name": "2.1 Positive",
+							"item": [
+								{
+									"name": "Authorization with correct login",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response JSON has `accessToken` key\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.have.property(\"accessToken\");\r",
+													"    pm.expect(jsonData.accessToken).to.be.a(\"string\").and.not.empty;\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response JSON has refreshToken key\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.have.property(\"refreshToken\");\r",
+													"    pm.expect(jsonData.refreshToken).to.be.a(\"string\").and.not.empty;\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response time is less than 600ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+													"});\r",
+													"\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Assept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "//{\r\n // \"email\": \"customer_1@car-rent.de\",\r\n // \"password\": \"user-pass#007\"\r\n//}\r\n\r\n{\r\n \"email\": \"john.doe@example.com\",\r\n \"password\": \"$2a$10$GPqSqrteDnrU0g2u6DNDdOxG9TS9Avb8NYiSqQstPiounC36ntNM6\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/auth/login",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Login Customer 1",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"let email = pm.environment.get(\"email\");",
+													"let password = pm.environment.get(\"password\");",
+													"",
+													"pm.test(\"Email and password must be added\", function() {",
+													"    pm.expect(email).to.exist;",
+													"    pm.expect(password).to.exist;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/auth/login",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "2.2 Negative",
+							"item": [
+								{
+									"name": "Authorization with incorrect login",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 401\", function () {\r",
+													"    pm.response.to.have.status(401);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"The response contains an error message.\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.have.property(\"message\");\r",
+													"    pm.expect(jsonData.message).to.be.a(\"string\").and.not.empty;\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"customer_1_TEST@car-rent.de\",\r\n  \"password\": \"user-pass#007\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/api/auth/login",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Authorization with incorrect password",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 401\", function () {\r",
+													"    pm.response.to.have.status(401);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"The response contains an error message.\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.have.property(\"message\");\r",
+													"    pm.expect(jsonData.message).to.be.a(\"string\").and.not.empty;\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"customer_1_TEST@car-rent.de\",\r\n  \"password\": \"user-pass#007TEST\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/api/auth/login",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Authorization with invalid login",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 401\", function () {\r",
+													"    pm.response.to.have.status(401);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"The response contains an error message.\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.have.property(\"message\");\r",
+													"    pm.expect(jsonData.message).to.be.a(\"string\").and.not.empty;\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"customer_1_TEST.car-rent.de\",\r\n  \"password\": \"user-pass#007\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/api/auth/login",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Authorization with invalid password",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 401\", function () {\r",
+													"    pm.response.to.have.status(401);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"The response contains an error message.\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.have.property(\"message\");\r",
+													"    pm.expect(jsonData.message).to.be.a(\"string\").and.not.empty;\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"customer_1_TEST@car-rent.de\",\r\n  \"password\": \"user\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/api/auth/login",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "The \"Email\" field and is not filled in",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"The answer is 401 if there is no email.\", function () {\r",
+													"    pm.response.to.have.status(401);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"The response contains an error message.\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.have.property(\"message\");\r",
+													"    pm.expect(jsonData.message).to.be.a(\"string\").and.not.empty;\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": null,\r\n  \"password\": \"user-pass#007\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/api/auth/login",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "The \"Password\" field and is not filled in",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"The answer is 401 if there is no password.\", function () {\r",
+													"    pm.response.to.have.status(401);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"The response contains an error message.\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.have.property(\"message\");\r",
+													"    pm.expect(jsonData.message).to.be.a(\"string\").and.not.empty;\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"customer_1@car-rent.de\",\r\n    \"password\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/api/auth/login",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get list of cars (as guest)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
