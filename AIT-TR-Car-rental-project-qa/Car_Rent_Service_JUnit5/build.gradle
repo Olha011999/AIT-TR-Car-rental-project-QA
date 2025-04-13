@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.31.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-safari-driver', version: '4.30.0'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '6.0.1'
+    implementation 'org.slf4j:slf4j-nop:2.0.7' // зависимость от SLF4J
+}
+
+test {
+    useJUnitPlatform()
+}
+
+def registerTask = { name, tag ->
+    tasks.register(name + 'Test', Test) {
+        description = "Runs the ${name} tests (tag: ${tag})"
+        group = "verification"
+
+        useJUnitPlatform {
+            includeTags tag
+        }
+
+        testLogging {
+            events "passed", "failed", "skipped"
+        }
+    }
+}
+
+test {
+    reports {
+        junitXml.required = true
+        junitXml.outputLocation = file("$buildDir/../target/test-reports")
+
+        html.required = true
+        html.outputLocation = file("$buildDir/reports/tests/$name")
+    }
+}
+
+registerTask('home', 'home')
+registerTask('smoky', 'smoky')
+registerTask('regression', 'regression')
